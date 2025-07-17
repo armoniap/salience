@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entity Salience Analysis Tool</title>
+    <meta name="description" content="Analyze text to extract entities and calculate their salience scores using Google Cloud Natural Language API">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Entity Salience Analysis Tool</h1>
+            <p class="subtitle">Analyze text to extract entities and calculate their importance scores</p>
+            <div class="api-key-status">
+                <span id="api-key-status" class="api-key-indicator">API Key: Not configured</span>
+                <button id="settings-btn" class="btn btn-outline btn-small">Settings</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="input-section">
+                <div class="input-container">
+                    <label for="text-input" class="input-label">Enter text to analyze:</label>
+                    <textarea 
+                        id="text-input" 
+                        class="text-input" 
+                        placeholder="Paste your text here for entity analysis..."
+                        rows="8"
+                    ></textarea>
+                    <div class="input-meta">
+                        <span class="character-count">0 characters</span>
+                        <div class="language-selector">
+                            <label for="language-select">Language:</label>
+                            <select id="language-select">
+                                <option value="auto">Auto-detect</option>
+                                <option value="it">Italian</option>
+                                <option value="en">English</option>
+                                <option value="es">Spanish</option>
+                                <option value="fr">French</option>
+                                <option value="de">German</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="analyze-btn" class="btn btn-primary">Analyze Text</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+            </section>
+
+            <section class="results-section" id="results-section" style="display: none;">
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <div class="export-buttons">
+                        <button id="export-json" class="btn btn-outline">Export JSON</button>
+                        <button id="export-csv" class="btn btn-outline">Export CSV</button>
+                    </div>
+                </div>
+
+                <div class="results-content">
+                    <div class="analysis-info">
+                        <span class="detected-language">Language: <span id="detected-language">-</span></span>
+                        <span class="entity-count">Entities found: <span id="entity-count">0</span></span>
+                    </div>
+
+                    <div class="entities-container">
+                        <div class="entities-list" id="entities-list">
+                            <!-- Entities will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="highlighted-text">
+                        <h3>Text with Highlighted Entities</h3>
+                        <div class="highlighted-content" id="highlighted-content">
+                            <!-- Highlighted text will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="loading-section" id="loading-section" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>Analyzing text...</p>
+            </section>
+
+            <section class="error-section" id="error-section" style="display: none;">
+                <div class="error-message">
+                    <h3>Error</h3>
+                    <p id="error-text"></p>
+                    <button id="retry-btn" class="btn btn-primary">Try Again</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Powered by Google Cloud Natural Language API</p>
+        </footer>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>API Settings</h2>
+                <button id="close-modal" class="btn btn-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="api-key-section">
+                    <h3>Google Cloud Natural Language API Key</h3>
+                    <p class="api-key-description">
+                        Enter your Google Cloud Natural Language API key. This key will be stored locally in your browser and is required to analyze text.
+                    </p>
+                    <div class="api-key-input-group">
+                        <label for="api-key-input" class="input-label">API Key:</label>
+                        <input 
+                            type="password" 
+                            id="api-key-input" 
+                            class="api-key-input" 
+                            placeholder="Enter your Google API key (AIza...)"
+                            autocomplete="off"
+                        >
+                        <button id="toggle-api-key" class="btn btn-outline btn-small">Show</button>
+                    </div>
+                    <div class="api-key-status-message" id="api-key-status-message"></div>
+                </div>
+                
+                <div class="api-key-help">
+                    <h4>How to get your API key:</h4>
+                    <ol>
+                        <li>Go to <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a></li>
+                        <li>Create a new project or select an existing one</li>
+                        <li>Enable the Natural Language API</li>
+                        <li>Go to "Credentials" and create an API key</li>
+                        <li>Copy the API key and paste it above</li>
+                    </ol>
+                    <p class="api-key-note">
+                        <strong>Note:</strong> Your API key is stored locally in your browser and is never sent to our servers.
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="save-api-key" class="btn btn-primary">Save API Key</button>
+                <button id="test-api-key" class="btn btn-secondary">Test API Key</button>
+                <button id="clear-api-key" class="btn btn-outline">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="scripts/api.js"></script>
+    <script src="scripts/analyzer.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
