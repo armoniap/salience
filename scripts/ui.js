@@ -1,0 +1,428 @@
+// UI Interactions and DOM Manipulation
+
+class UIManager {
+  constructor() {
+    this.elements = {};
+    this.state = {
+      isAnalyzing: false,
+      lastAnalysis: null,
+      currentText: ''
+    };
+    this.bindElements();
+    this.bindEvents();
+  }
+
+  bindElements() {
+    this.elements = {
+      textInput: document.getElementById('text-input'),
+      characterCount: document.querySelector('.character-count'),
+      languageSelect: document.getElementById('language-select'),
+      analyzeBtn: document.getElementById('analyze-btn'),
+      clearBtn: document.getElementById('clear-btn'),
+      retryBtn: document.getElementById('retry-btn'),
+      
+      loadingSection: document.getElementById('loading-section'),
+      errorSection: document.getElementById('error-section'),
+      resultsSection: document.getElementById('results-section'),
+      
+      detectedLanguage: document.getElementById('detected-language'),
+      entityCount: document.getElementById('entity-count'),
+      entitiesList: document.getElementById('entities-list'),
+      highlightedContent: document.getElementById('highlighted-content'),
+      
+      exportJsonBtn: document.getElementById('export-json'),
+      exportCsvBtn: document.getElementById('export-csv'),
+      
+      errorText: document.getElementById('error-text')
+    };
+  }
+
+  bindEvents() {
+    // Input events
+    this.elements.textInput.addEventListener('input', (e) => {
+      this.updateCharacterCount();
+      this.updateAnalyzeButtonState();
+    });
+
+    // Button events
+    this.elements.analyzeBtn.addEventListener('click', () => {
+      this.triggerAnalysis();
+    });
+
+    this.elements.clearBtn.addEventListener('click', () => {
+      this.clearInput();
+    });
+
+    this.elements.retryBtn.addEventListener('click', () => {
+      this.triggerAnalysis();
+    });
+
+    // Export events
+    this.elements.exportJsonBtn.addEventListener('click', () => {
+      this.exportResults('json');
+    });
+
+    this.elements.exportCsvBtn.addEventListener('click', () => {
+      this.exportResults('csv');
+    });
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.ctrlKey || e.metaKey) {
+        switch (e.key) {
+          case 'Enter':
+            e.preventDefault();
+            if (!this.state.isAnalyzing) {
+              this.triggerAnalysis();
+            }
+            break;
+          case 'l':
+            e.preventDefault();
+            this.elements.textInput.focus();
+            break;
+        }
+      }
+    });
+
+    // Language selection
+    this.elements.languageSelect.addEventListener('change', () => {
+      this.updateAnalyzeButtonState();
+    });
+  }
+
+  updateCharacterCount() {
+    const text = this.elements.textInput.value;
+    const count = text.length;
+    this.elements.characterCount.textContent = `${count.toLocaleString()} characters`;
+    this.state.currentText = text;
+    
+    // Update character count color based on length
+    if (count > 900000) {
+      this.elements.characterCount.style.color = 'var(--error-color)';
+    } else if (count > 500000) {
+      this.elements.characterCount.style.color = 'var(--warning-color)';
+    } else {
+      this.elements.characterCount.style.color = 'var(--text-secondary)';
+    }
+  }
+
+  updateAnalyzeButtonState() {
+    const text = this.elements.textInput.value.trim();
+    const hasText = text.length > 0;
+    const isNotTooLong = text.length <= 1000000;
+    
+    this.elements.analyzeBtn.disabled = this.state.isAnalyzing || !hasText || !isNotTooLong;
+    
+    if (!hasText) {
+      this.elements.analyzeBtn.textContent = 'Enter text to analyze';
+    } else if (!isNotTooLong) {
+      this.elements.analyzeBtn.textContent = 'Text too long';
+    } else if (this.state.isAnalyzing) {
+      this.elements.analyzeBtn.textContent = 'Analyzing...';
+    } else {
+      this.elements.analyzeBtn.textContent = 'Analyze Text';
+    }
+  }
+
+  triggerAnalysis() {
+    if (this.state.isAnalyzing) return;
+    
+    const text = this.elements.textInput.value.trim();
+    const language = this.elements.languageSelect.value;
+    
+    if (!text) {
+      this.showError('Please enter some text to analyze.');
+      return;
+    }
+
+    // Trigger analysis event
+    const event = new CustomEvent('analyzeText', {
+      detail: { text, language }
+    });
+    document.dispatchEvent(event);
+  }
+
+  clearInput() {
+    this.elements.textInput.value = '';
+    this.elements.textInput.focus();
+    this.updateCharacterCount();
+    this.updateAnalyzeButtonState();
+    this.hideAllSections();
+  }
+
+  showLoading() {
+    this.state.isAnalyzing = true;
+    this.updateAnalyzeButtonState();
+    this.hideAllSections();
+    this.elements.loadingSection.style.display = 'block';
+  }
+
+  hideLoading() {
+    this.state.isAnalyzing = false;
+    this.updateAnalyzeButtonState();
+    this.elements.loadingSection.style.display = 'none';
+  }
+
+  showError(message) {
+    this.hideLoading();
+    this.hideAllSections();
+    this.elements.errorText.textContent = message;
+    this.elements.errorSection.style.display = 'block';
+  }
+
+  showResults(analysisResult) {
+    this.hideLoading();
+    this.hideAllSections();
+    this.state.lastAnalysis = analysisResult;
+    
+    this.populateResults(analysisResult);
+    this.elements.resultsSection.style.display = 'block';
+    this.elements.resultsSection.classList.add('fade-in');
+  }
+
+  hideAllSections() {
+    this.elements.loadingSection.style.display = 'none';
+    this.elements.errorSection.style.display = 'none';
+    this.elements.resultsSection.style.display = 'none';
+  }
+
+  populateResults(analysisResult) {
+    const { entities, language, totalEntities } = analysisResult;
+    
+    // Update analysis info
+    this.elements.detectedLanguage.textContent = this.getLanguageName(language);
+    this.elements.entityCount.textContent = totalEntities;
+    
+    // Populate entities list
+    this.populateEntitiesList(entities);
+    
+    // Highlight entities in text
+    this.populateHighlightedText(this.state.currentText, entities);
+  }
+
+  populateEntitiesList(entities) {
+    const container = this.elements.entitiesList;
+    container.innerHTML = '';
+    
+    if (!entities || entities.length === 0) {
+      container.innerHTML = `
+        <div class="empty-state">
+          <h3>No entities found</h3>
+          <p>Try analyzing a different text or check the language settings.</p>
+        </div>
+      `;
+      return;
+    }
+
+    entities.forEach(entity => {
+      const entityCard = this.createEntityCard(entity);
+      container.appendChild(entityCard);
+    });
+  }
+
+  createEntityCard(entity) {
+    const card = document.createElement('div');
+    card.className = 'entity-card';
+    
+    const saliencePercentage = (entity.salience * 100).toFixed(1);
+    const mentionsText = entity.mentions.map(m => m.text).join(', ');
+    
+    card.innerHTML = `
+      <div class="entity-header">
+        <div class="entity-info">
+          <div class="entity-name">${this.escapeHtml(entity.name)}</div>
+          <div class="entity-type entity-type-${entity.type.toLowerCase()}">${entity.typeName}</div>
+        </div>
+        <div class="entity-salience">
+          <div class="salience-score">${saliencePercentage}%</div>
+          <div class="salience-bar">
+            <div class="salience-fill" style="width: ${saliencePercentage}%"></div>
+          </div>
+        </div>
+      </div>
+      
+      ${entity.wikipediaUrl ? `
+        <div class="entity-metadata">
+          <a href="${entity.wikipediaUrl}" target="_blank" rel="noopener noreferrer" class="entity-wikipedia">
+            📖 Wikipedia
+          </a>
+        </div>
+      ` : ''}
+      
+      <div class="entity-mentions">
+        <div class="entity-mentions-title">Mentions (${entity.mentions.length}):</div>
+        <div class="entity-mentions-list">
+          ${entity.mentions.map(mention => `
+            <span class="mention-tag">${this.escapeHtml(mention.text)}</span>
+          `).join('')}
+        </div>
+      </div>
+    `;
+    
+    return card;
+  }
+
+  populateHighlightedText(originalText, entities) {
+    const container = this.elements.highlightedContent;
+    
+    if (!originalText || !entities || entities.length === 0) {
+      container.innerHTML = this.escapeHtml(originalText || '');
+      return;
+    }
+
+    // Use analyzer to highlight entities
+    const analyzer = new EntityAnalyzer();
+    const highlightedText = analyzer.highlightEntitiesInText(originalText, entities);
+    container.innerHTML = highlightedText;
+    
+    // Add click events to highlighted entities
+    container.querySelectorAll('.highlighted-entity').forEach(element => {
+      element.addEventListener('click', (e) => {
+        const entityName = e.target.dataset.entity;
+        const entityType = e.target.dataset.type;
+        const salience = e.target.dataset.salience;
+        
+        this.showEntityPopup(entityName, entityType, salience, e.target);
+      });
+    });
+  }
+
+  showEntityPopup(entityName, entityType, salience, element) {
+    // Simple tooltip-like popup
+    const popup = document.createElement('div');
+    popup.className = 'entity-popup';
+    popup.innerHTML = `
+      <strong>${this.escapeHtml(entityName)}</strong><br>
+      Type: ${entityType}<br>
+      Salience: ${(parseFloat(salience) * 100).toFixed(1)}%
+    `;
+    
+    popup.style.cssText = `
+      position: absolute;
+      background: var(--text-primary);
+      color: var(--background-color);
+      padding: var(--spacing-sm);
+      border-radius: var(--border-radius);
+      font-size: var(--font-size-small);
+      box-shadow: var(--shadow-medium);
+      z-index: 1000;
+      max-width: 200px;
+      pointer-events: none;
+    `;
+    
+    document.body.appendChild(popup);
+    
+    const rect = element.getBoundingClientRect();
+    popup.style.left = rect.left + 'px';
+    popup.style.top = (rect.bottom + 5) + 'px';
+    
+    // Remove popup after 3 seconds
+    setTimeout(() => {
+      document.body.removeChild(popup);
+    }, 3000);
+  }
+
+  exportResults(format) {
+    if (!this.state.lastAnalysis) {
+      this.showError('No analysis results to export.');
+      return;
+    }
+
+    const analyzer = new EntityAnalyzer();
+    let content, filename, mimeType;
+
+    switch (format) {
+      case 'json':
+        content = analyzer.exportToJSON(this.state.lastAnalysis);
+        filename = 'entity-analysis.json';
+        mimeType = 'application/json';
+        break;
+      case 'csv':
+        content = analyzer.exportToCSV(this.state.lastAnalysis);
+        filename = 'entity-analysis.csv';
+        mimeType = 'text/csv';
+        break;
+      default:
+        this.showError('Unknown export format.');
+        return;
+    }
+
+    this.downloadFile(content, filename, mimeType);
+  }
+
+  downloadFile(content, filename, mimeType) {
+    const blob = new Blob([content], { type: mimeType });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    a.style.display = 'none';
+    
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    
+    URL.revokeObjectURL(url);
+  }
+
+  getLanguageName(languageCode) {
+    const languages = {
+      'it': 'Italian',
+      'en': 'English',
+      'es': 'Spanish',
+      'fr': 'French',
+      'de': 'German',
+      'pt': 'Portuguese',
+      'ru': 'Russian',
+      'ja': 'Japanese',
+      'ko': 'Korean',
+      'zh': 'Chinese'
+    };
+    
+    return languages[languageCode] || languageCode || 'Unknown';
+  }
+
+  escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  showToast(message, type = 'info') {
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+    toast.textContent = message;
+    
+    toast.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--primary-color);
+      color: white;
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-medium);
+      z-index: 1000;
+      animation: slideIn 0.3s ease;
+    `;
+    
+    if (type === 'error') {
+      toast.style.background = 'var(--error-color)';
+    } else if (type === 'success') {
+      toast.style.background = 'var(--success-color)';
+    }
+    
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+      toast.style.animation = 'slideOut 0.3s ease';
+      setTimeout(() => {
+        document.body.removeChild(toast);
+      }, 300);
+    }, 3000);
+  }
+}
+
+// Export for use in other modules
+window.UIManager = UIManager;

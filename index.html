@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entity Salience Analysis Tool</title>
+    <meta name="description" content="Analyze text to extract entities and calculate their salience scores using Google Cloud Natural Language API">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Entity Salience Analysis Tool</h1>
+            <p class="subtitle">Analyze text to extract entities and calculate their importance scores</p>
+        </header>
+
+        <main class="main-content">
+            <section class="input-section">
+                <div class="input-container">
+                    <label for="text-input" class="input-label">Enter text to analyze:</label>
+                    <textarea 
+                        id="text-input" 
+                        class="text-input" 
+                        placeholder="Paste your text here for entity analysis..."
+                        rows="8"
+                    ></textarea>
+                    <div class="input-meta">
+                        <span class="character-count">0 characters</span>
+                        <div class="language-selector">
+                            <label for="language-select">Language:</label>
+                            <select id="language-select">
+                                <option value="auto">Auto-detect</option>
+                                <option value="it">Italian</option>
+                                <option value="en">English</option>
+                                <option value="es">Spanish</option>
+                                <option value="fr">French</option>
+                                <option value="de">German</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="analyze-btn" class="btn btn-primary">Analyze Text</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+            </section>
+
+            <section class="results-section" id="results-section" style="display: none;">
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <div class="export-buttons">
+                        <button id="export-json" class="btn btn-outline">Export JSON</button>
+                        <button id="export-csv" class="btn btn-outline">Export CSV</button>
+                    </div>
+                </div>
+
+                <div class="results-content">
+                    <div class="analysis-info">
+                        <span class="detected-language">Language: <span id="detected-language">-</span></span>
+                        <span class="entity-count">Entities found: <span id="entity-count">0</span></span>
+                    </div>
+
+                    <div class="entities-container">
+                        <div class="entities-list" id="entities-list">
+                            <!-- Entities will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="highlighted-text">
+                        <h3>Text with Highlighted Entities</h3>
+                        <div class="highlighted-content" id="highlighted-content">
+                            <!-- Highlighted text will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="loading-section" id="loading-section" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>Analyzing text...</p>
+            </section>
+
+            <section class="error-section" id="error-section" style="display: none;">
+                <div class="error-message">
+                    <h3>Error</h3>
+                    <p id="error-text"></p>
+                    <button id="retry-btn" class="btn btn-primary">Try Again</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Powered by Google Cloud Natural Language API</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="scripts/api.js"></script>
+    <script src="scripts/analyzer.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
