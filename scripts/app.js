@@ -22,6 +22,14 @@ class SalienceApp {
       // Set initial state
       this.ui.updateCharacterCount();
       this.ui.updateAnalyzeButtonState();
+      this.ui.updateApiKeyStatus();
+
+      // Check if API key is missing and show modal if needed
+      if (!this.api.hasApiKey()) {
+        setTimeout(() => {
+          this.ui.showSettingsModal();
+        }, 500);
+      }
 
       this.initialized = true;
       console.log('Salience App initialized successfully');

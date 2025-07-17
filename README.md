@@ -10,6 +10,7 @@ A web-based tool that analyzes text to extract entities and calculate their sali
 - **Salience Scoring**: Calculate importance scores (0-1 scale) for each entity
 - **Visual Highlighting**: Highlight entities in original text with color coding
 - **Export Options**: Export results to JSON or CSV format
+- **Secure API Key Management**: Store API keys locally in browser with validation
 - **Responsive Design**: Mobile-first responsive design for all devices
 - **Error Handling**: Comprehensive error handling for API failures and network issues
 
@@ -55,17 +56,32 @@ php -S localhost:8000
 
 ### Usage
 
-1. **Enter Text**: Paste or type text into the input area
-2. **Select Language**: Choose language or use auto-detection
-3. **Analyze**: Click "Analyze Text" to process the text
-4. **View Results**: Review entities with salience scores and types
-5. **Export**: Download results as JSON or CSV
+1. **Setup API Key**: On first use, enter your Google Cloud Natural Language API key in the settings modal
+2. **Enter Text**: Paste or type text into the input area
+3. **Select Language**: Choose language or use auto-detection
+4. **Analyze**: Click "Analyze Text" to process the text
+5. **View Results**: Review entities with salience scores and types
+6. **Export**: Download results as JSON or CSV
 
 ## API Configuration
 
-The tool uses Google Cloud Natural Language API with the following configuration:
+### Getting Your API Key
 
-- **API Key**: Configured in `scripts/api.js`
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project or select an existing one
+3. Enable the Natural Language API
+4. Go to "Credentials" and create an API key
+5. Copy the API key and enter it in the app's settings
+
+### Security
+
+- **API Key Storage**: Your API key is stored locally in your browser's localStorage
+- **No Server Storage**: The API key is never sent to any server except Google's API
+- **Client-Side Only**: All processing happens in your browser
+- **HTTPS Required**: All API communications use HTTPS
+
+### API Configuration Details
+
 - **Endpoint**: `https://language.googleapis.com/v1/documents:analyzeEntities`
 - **Features**: Entity Analysis with Salience Scoring
 - **Rate Limits**: 5,000 units per month (free tier)
@@ -172,8 +188,10 @@ The tool handles various error scenarios:
 
 - All processing is done client-side except for API calls
 - No text data is stored on servers
-- API key is visible in client-side code (acceptable for frontend-only apps)
+- API key is stored locally in browser localStorage (not in source code)
 - All API communications use HTTPS
+- API key validation and testing built-in
+- Settings modal for secure API key management
 
 ## License
 

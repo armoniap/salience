@@ -16,6 +16,10 @@
         <header class="header">
             <h1>Entity Salience Analysis Tool</h1>
             <p class="subtitle">Analyze text to extract entities and calculate their importance scores</p>
+            <div class="api-key-status">
+                <span id="api-key-status" class="api-key-indicator">API Key: Not configured</span>
+                <button id="settings-btn" class="btn btn-outline btn-small">Settings</button>
+            </div>
         </header>
 
         <main class="main-content">
@@ -97,6 +101,55 @@
         <footer class="footer">
             <p>Powered by Google Cloud Natural Language API</p>
         </footer>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>API Settings</h2>
+                <button id="close-modal" class="btn btn-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="api-key-section">
+                    <h3>Google Cloud Natural Language API Key</h3>
+                    <p class="api-key-description">
+                        Enter your Google Cloud Natural Language API key. This key will be stored locally in your browser and is required to analyze text.
+                    </p>
+                    <div class="api-key-input-group">
+                        <label for="api-key-input" class="input-label">API Key:</label>
+                        <input 
+                            type="password" 
+                            id="api-key-input" 
+                            class="api-key-input" 
+                            placeholder="Enter your Google API key (AIza...)"
+                            autocomplete="off"
+                        >
+                        <button id="toggle-api-key" class="btn btn-outline btn-small">Show</button>
+                    </div>
+                    <div class="api-key-status-message" id="api-key-status-message"></div>
+                </div>
+                
+                <div class="api-key-help">
+                    <h4>How to get your API key:</h4>
+                    <ol>
+                        <li>Go to <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a></li>
+                        <li>Create a new project or select an existing one</li>
+                        <li>Enable the Natural Language API</li>
+                        <li>Go to "Credentials" and create an API key</li>
+                        <li>Copy the API key and paste it above</li>
+                    </ol>
+                    <p class="api-key-note">
+                        <strong>Note:</strong> Your API key is stored locally in your browser and is never sent to our servers.
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="save-api-key" class="btn btn-primary">Save API Key</button>
+                <button id="test-api-key" class="btn btn-secondary">Test API Key</button>
+                <button id="clear-api-key" class="btn btn-outline">Clear</button>
+            </div>
+        </div>
     </div>
 
     <!-- JavaScript Files -->

@@ -33,7 +33,19 @@ class UIManager {
       exportJsonBtn: document.getElementById('export-json'),
       exportCsvBtn: document.getElementById('export-csv'),
       
-      errorText: document.getElementById('error-text')
+      errorText: document.getElementById('error-text'),
+      
+      // API Key elements
+      apiKeyStatus: document.getElementById('api-key-status'),
+      settingsBtn: document.getElementById('settings-btn'),
+      settingsModal: document.getElementById('settings-modal'),
+      closeModal: document.getElementById('close-modal'),
+      apiKeyInput: document.getElementById('api-key-input'),
+      toggleApiKey: document.getElementById('toggle-api-key'),
+      saveApiKey: document.getElementById('save-api-key'),
+      testApiKey: document.getElementById('test-api-key'),
+      clearApiKey: document.getElementById('clear-api-key'),
+      apiKeyStatusMessage: document.getElementById('api-key-status-message')
     };
   }
 
@@ -87,6 +99,48 @@ class UIManager {
     // Language selection
     this.elements.languageSelect.addEventListener('change', () => {
       this.updateAnalyzeButtonState();
+    });
+
+    // API Key modal events
+    this.elements.settingsBtn.addEventListener('click', () => {
+      this.showSettingsModal();
+    });
+
+    this.elements.closeModal.addEventListener('click', () => {
+      this.hideSettingsModal();
+    });
+
+    this.elements.settingsModal.addEventListener('click', (e) => {
+      if (e.target === this.elements.settingsModal) {
+        this.hideSettingsModal();
+      }
+    });
+
+    this.elements.toggleApiKey.addEventListener('click', () => {
+      this.toggleApiKeyVisibility();
+    });
+
+    this.elements.saveApiKey.addEventListener('click', () => {
+      this.saveApiKey();
+    });
+
+    this.elements.testApiKey.addEventListener('click', () => {
+      this.testApiKey();
+    });
+
+    this.elements.clearApiKey.addEventListener('click', () => {
+      this.clearApiKey();
+    });
+
+    this.elements.apiKeyInput.addEventListener('input', () => {
+      this.clearApiKeyStatusMessage();
+    });
+
+    // ESC key to close modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && this.elements.settingsModal.style.display === 'flex') {
+        this.hideSettingsModal();
+      }
     });
   }
 
@@ -421,6 +475,146 @@ class UIManager {
         document.body.removeChild(toast);
       }, 300);
     }, 3000);
+  }
+
+  // API Key Management Methods
+  updateApiKeyStatus() {
+    const apiKey = localStorage.getItem('google-nlp-api-key');
+    const statusElement = this.elements.apiKeyStatus;
+    
+    if (apiKey && apiKey.trim()) {
+      statusElement.textContent = 'API Key: Configured';
+      statusElement.className = 'api-key-indicator configured';
+    } else {
+      statusElement.textContent = 'API Key: Not configured';
+      statusElement.className = 'api-key-indicator error';
+    }
+  }
+
+  showSettingsModal() {
+    this.elements.settingsModal.style.display = 'flex';
+    
+    // Load current API key (masked)
+    const apiKey = localStorage.getItem('google-nlp-api-key');
+    if (apiKey) {
+      this.elements.apiKeyInput.value = apiKey;
+    }
+    
+    this.elements.apiKeyInput.focus();
+  }
+
+  hideSettingsModal() {
+    this.elements.settingsModal.style.display = 'none';
+    this.clearApiKeyStatusMessage();
+  }
+
+  toggleApiKeyVisibility() {
+    const input = this.elements.apiKeyInput;
+    const button = this.elements.toggleApiKey;
+    
+    if (input.type === 'password') {
+      input.type = 'text';
+      button.textContent = 'Hide';
+    } else {
+      input.type = 'password';
+      button.textContent = 'Show';
+    }
+  }
+
+  saveApiKey() {
+    const apiKey = this.elements.apiKeyInput.value.trim();
+    
+    if (!apiKey) {
+      this.showApiKeyStatusMessage('Please enter an API key', 'error');
+      return;
+    }
+
+    try {
+      // Create a temporary API instance to validate the key
+      const tempApi = new NaturalLanguageAPI();
+      tempApi.validateApiKey(apiKey);
+      
+      // If validation passes, save the key
+      tempApi.setApiKey(apiKey);
+      
+      this.showApiKeyStatusMessage('API key saved successfully', 'success');
+      this.updateApiKeyStatus();
+      
+      // Close modal after a short delay
+      setTimeout(() => {
+        this.hideSettingsModal();
+      }, 1500);
+      
+    } catch (error) {
+      this.showApiKeyStatusMessage(error.message, 'error');
+    }
+  }
+
+  async testApiKey() {
+    const apiKey = this.elements.apiKeyInput.value.trim();
+    
+    if (!apiKey) {
+      this.showApiKeyStatusMessage('Please enter an API key to test', 'error');
+      return;
+    }
+
+    this.showApiKeyStatusMessage('Testing API key...', 'info');
+    this.elements.testApiKey.disabled = true;
+    this.elements.testApiKey.textContent = 'Testing...';
+
+    try {
+      const tempApi = new NaturalLanguageAPI();
+      tempApi.setApiKey(apiKey);
+      
+      // Test with a simple text
+      const testText = 'Hello world';
+      await tempApi.analyzeEntities(testText);
+      
+      this.showApiKeyStatusMessage('API key is valid and working!', 'success');
+      
+    } catch (error) {
+      let message = 'API key test failed';
+      if (error instanceof window.APIError) {
+        message = error.getUserMessage();
+      } else if (error.message) {
+        message = error.message;
+      }
+      
+      this.showApiKeyStatusMessage(message, 'error');
+    } finally {
+      this.elements.testApiKey.disabled = false;
+      this.elements.testApiKey.textContent = 'Test API Key';
+    }
+  }
+
+  clearApiKey() {
+    if (confirm('Are you sure you want to clear the API key?')) {
+      localStorage.removeItem('google-nlp-api-key');
+      this.elements.apiKeyInput.value = '';
+      this.showApiKeyStatusMessage('API key cleared', 'info');
+      this.updateApiKeyStatus();
+    }
+  }
+
+  showApiKeyStatusMessage(message, type) {
+    const messageElement = this.elements.apiKeyStatusMessage;
+    messageElement.textContent = message;
+    messageElement.className = `api-key-status-message ${type}`;
+    
+    // Clear input styling
+    this.elements.apiKeyInput.className = 'api-key-input';
+    
+    // Add input styling based on message type
+    if (type === 'error') {
+      this.elements.apiKeyInput.classList.add('error');
+    } else if (type === 'success') {
+      this.elements.apiKeyInput.classList.add('success');
+    }
+  }
+
+  clearApiKeyStatusMessage() {
+    this.elements.apiKeyStatusMessage.className = 'api-key-status-message';
+    this.elements.apiKeyInput.className = 'api-key-input';
   }
 }
 

@@ -2,13 +2,54 @@
 
 class NaturalLanguageAPI {
   constructor() {
-    this.apiKey = 'AIzaSyA_OUA0eJj3x71IStWkwTFNEgoOBSzOWrs';
+    this.apiKey = this.getStoredApiKey();
     this.baseUrl = 'https://language.googleapis.com/v1/documents:analyzeEntities';
     this.maxRetries = 3;
     this.retryDelay = 1000;
   }
 
+  getStoredApiKey() {
+    return localStorage.getItem('google-nlp-api-key') || '';
+  }
+
+  setApiKey(apiKey) {
+    this.apiKey = apiKey;
+    if (apiKey) {
+      localStorage.setItem('google-nlp-api-key', apiKey);
+    } else {
+      localStorage.removeItem('google-nlp-api-key');
+    }
+  }
+
+  hasApiKey() {
+    return this.apiKey && this.apiKey.trim().length > 0;
+  }
+
+  validateApiKey(apiKey) {
+    if (!apiKey || typeof apiKey !== 'string') {
+      throw new ValidationError('API key is required and must be a string');
+    }
+
+    if (apiKey.trim().length === 0) {
+      throw new ValidationError('API key cannot be empty');
+    }
+
+    if (!apiKey.startsWith('AIza')) {
+      throw new ValidationError('Invalid Google API key format. It should start with "AIza"');
+    }
+
+    if (apiKey.length < 35 || apiKey.length > 45) {
+      throw new ValidationError('Invalid Google API key length');
+    }
+
+    return true;
+  }
+
   async analyzeEntities(text, language = 'auto') {
+    if (!this.hasApiKey()) {
+      throw new ValidationError('API key is required. Please configure your Google Cloud Natural Language API key.');
+    }
+
     const document = {
       content: text,
       type: 'PLAIN_TEXT'
