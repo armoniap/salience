@@ -1,0 +1,5938 @@
+{
+  "entities": [
+    {
+      "name": "life coach",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.071713835,
+      "mentions": [
+        {
+          "text": "life coach",
+          "type": "COMMON",
+          "beginOffset": 140
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.171713835
+    },
+    {
+      "name": "complessità",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.06420626,
+      "mentions": [
+        {
+          "text": "complessità",
+          "type": "COMMON",
+          "beginOffset": 79
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.16420626
+    },
+    {
+      "name": "Life Coach",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.063138194,
+      "mentions": [
+        {
+          "text": "Life Coach",
+          "type": "PROPER",
+          "beginOffset": 13
+        },
+        {
+          "text": "Life Coach",
+          "type": "PROPER",
+          "beginOffset": 803
+        },
+        {
+          "text": "Life Coach",
+          "type": "PROPER",
+          "beginOffset": 1605
+        },
+        {
+          "text": "Life Coach",
+          "type": "PROPER",
+          "beginOffset": 2501
+        }
+      ],
+      "metadata": {
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Lifestyle_guru",
+        "mid": "/g/11ckrcsx2b"
+      },
+      "color": "#1976d2",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Lifestyle_guru",
+      "confidence": 0.563138194
+    },
+    {
+      "name": "persone",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.059055135,
+      "mentions": [
+        {
+          "text": "persone",
+          "type": "COMMON",
+          "beginOffset": 109
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.15905513500000001
+    },
+    {
+      "name": "sfide",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.059055135,
+      "mentions": [
+        {
+          "text": "sfide",
+          "type": "COMMON",
+          "beginOffset": 187
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.15905513500000001
+    },
+    {
+      "name": "Ruolo",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.051604196,
+      "mentions": [
+        {
+          "text": "Ruolo",
+          "type": "COMMON",
+          "beginOffset": 3
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.151604196
+    },
+    {
+      "name": "guida",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.050994016,
+      "mentions": [
+        {
+          "text": "guida",
+          "type": "COMMON",
+          "beginOffset": 238
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.150994016
+    },
+    {
+      "name": "epoca",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.044544533,
+      "mentions": [
+        {
+          "text": "epoca",
+          "type": "COMMON",
+          "beginOffset": 55
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.144544533
+    },
+    {
+      "name": "Supporto Personale",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0382472,
+      "mentions": [
+        {
+          "text": "Supporto Personale",
+          "type": "PROPER",
+          "beginOffset": 28
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.23824720000000002
+    },
+    {
+      "name": "life coach",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.03665884,
+      "mentions": [
+        {
+          "text": "life coach",
+          "type": "COMMON",
+          "beginOffset": 256
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.13665884
+    },
+    {
+      "name": "life coach",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.027709102,
+      "mentions": [
+        {
+          "text": "life coach",
+          "type": "COMMON",
+          "beginOffset": 398
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.12770910200000002
+    },
+    {
+      "name": "supporto",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.022127122,
+      "mentions": [
+        {
+          "text": "supporto",
+          "type": "COMMON",
+          "beginOffset": 282
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.122127122
+    },
+    {
+      "name": "crescita",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.022127122,
+      "mentions": [
+        {
+          "text": "crescita",
+          "type": "COMMON",
+          "beginOffset": 342
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.122127122
+    },
+    {
+      "name": "clienti",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.020170122,
+      "mentions": [
+        {
+          "text": "clienti",
+          "type": "COMMON",
+          "beginOffset": 441
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.120170122
+    },
+    {
+      "name": "orientamento",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.02008531,
+      "mentions": [
+        {
+          "text": "orientamento",
+          "type": "COMMON",
+          "beginOffset": 327
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.12008531
+    },
+    {
+      "name": "chiarezza",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.017521482,
+      "mentions": [
+        {
+          "text": "chiarezza",
+          "type": "COMMON",
+          "beginOffset": 316
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.11752148200000001
+    },
+    {
+      "name": "Specializzato",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.015160794,
+      "mentions": [
+        {
+          "text": "Specializzato",
+          "type": "COMMON",
+          "beginOffset": 366
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.11516079400000001
+    },
+    {
+      "name": "benessere",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.01322274,
+      "mentions": [
+        {
+          "text": "benessere",
+          "type": "COMMON",
+          "beginOffset": 384
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.11322274
+    },
+    {
+      "name": "empowerment",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.01322274,
+      "mentions": [
+        {
+          "text": "empowerment",
+          "type": "COMMON",
+          "beginOffset": 425
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.11322274
+    },
+    {
+      "name": "life coaching",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.008203837,
+      "mentions": [
+        {
+          "text": "life coaching",
+          "type": "COMMON",
+          "beginOffset": 682
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10820383700000001
+    },
+    {
+      "name": "life coaching",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0072261193,
+      "mentions": [
+        {
+          "text": "life coaching",
+          "type": "COMMON",
+          "beginOffset": 843
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1072261193
+    },
+    {
+      "name": "vita",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.005569017,
+      "mentions": [
+        {
+          "text": "vita",
+          "type": "COMMON",
+          "beginOffset": 514
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.105569017
+    },
+    {
+      "name": "aspetti",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.005569017,
+      "mentions": [
+        {
+          "text": "aspetti",
+          "type": "COMMON",
+          "beginOffset": 495
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.105569017
+    },
+    {
+      "name": "life coaching",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0053195735,
+      "mentions": [
+        {
+          "text": "life coaching",
+          "type": "COMMON",
+          "beginOffset": 1177
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1053195735
+    },
+    {
+      "name": "scoperta",
+      "type": "EVENT",
+      "typeName": "Event",
+      "salience": 0.0052279066,
+      "mentions": [
+        {
+          "text": "scoperta",
+          "type": "COMMON",
+          "beginOffset": 554
+        }
+      ],
+      "metadata": {},
+      "color": "#7b1fa2",
+      "confidence": 0.1052279066
+    },
+    {
+      "name": "scopo",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0052279066,
+      "mentions": [
+        {
+          "text": "scopo",
+          "type": "COMMON",
+          "beginOffset": 625
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1052279066
+    },
+    {
+      "name": "approcci",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.004932779,
+      "mentions": [
+        {
+          "text": "approcci",
+          "type": "COMMON",
+          "beginOffset": 713
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.104932779
+    },
+    {
+      "name": "senso",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.004557642,
+      "mentions": [
+        {
+          "text": "senso",
+          "type": "COMMON",
+          "beginOffset": 616
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.104557642
+    },
+    {
+      "name": "costruzione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.004557642,
+      "mentions": [
+        {
+          "text": "costruzione",
+          "type": "COMMON",
+          "beginOffset": 589
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.104557642
+    },
+    {
+      "name": "felicità",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.004557642,
+      "mentions": [
+        {
+          "text": "felicità",
+          "type": "COMMON",
+          "beginOffset": 574
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.104557642
+    },
+    {
+      "name": "futuro",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0044751847,
+      "mentions": [
+        {
+          "text": "futuro",
+          "type": "COMMON",
+          "beginOffset": 769
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1044751847
+    },
+    {
+      "name": "life coaching",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0044044536,
+      "mentions": [
+        {
+          "text": "life coaching",
+          "type": "COMMON",
+          "beginOffset": 1681
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1044044536
+    },
+    {
+      "name": "successo",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.004323631,
+      "mentions": [
+        {
+          "text": "successo",
+          "type": "COMMON",
+          "beginOffset": 478
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.104323631
+    },
+    {
+      "name": "collaborazione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.004277086,
+      "mentions": [
+        {
+          "text": "collaborazione",
+          "type": "COMMON",
+          "beginOffset": 873
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.104277086
+    },
+    {
+      "name": "professionista",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.004199806,
+      "mentions": [
+        {
+          "text": "professionista",
+          "type": "COMMON",
+          "beginOffset": 527
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.104199806
+    },
+    {
+      "name": "life coach",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.0041214325,
+      "mentions": [
+        {
+          "text": "life coach",
+          "type": "COMMON",
+          "beginOffset": 1796
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.1041214325
+    },
+    {
+      "name": "professionista",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.0039412477,
+      "mentions": [
+        {
+          "text": "professionista",
+          "type": "COMMON",
+          "beginOffset": 904
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.1039412477
+    },
+    {
+      "name": "individuo",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.0039412477,
+      "mentions": [
+        {
+          "text": "individuo",
+          "type": "COMMON",
+          "beginOffset": 936
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.1039412477
+    },
+    {
+      "name": "Differenze",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0037206283,
+      "mentions": [
+        {
+          "text": "Differenze",
+          "type": "COMMON",
+          "beginOffset": 815
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1037206283
+    },
+    {
+      "name": "potenziale",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0036837673,
+      "mentions": [
+        {
+          "text": "potenziale",
+          "type": "COMMON",
+          "beginOffset": 978
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10368376730000001
+    },
+    {
+      "name": "Terapia",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0034357528,
+      "mentions": [
+        {
+          "text": "Terapia",
+          "type": "COMMON",
+          "beginOffset": 832
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1034357528
+    },
+    {
+      "name": "obiettivi",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.00334715,
+      "mentions": [
+        {
+          "text": "obiettivi",
+          "type": "COMMON",
+          "beginOffset": 1755
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10334715
+    },
+    {
+      "name": "terreno",
+      "type": "LOCATION",
+      "typeName": "Location",
+      "salience": 0.003217312,
+      "mentions": [
+        {
+          "text": "terreno",
+          "type": "COMMON",
+          "beginOffset": 1499
+        }
+      ],
+      "metadata": {},
+      "color": "#388e3c",
+      "confidence": 0.103217312
+    },
+    {
+      "name": "life coach",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.003204995,
+      "mentions": [
+        {
+          "text": "life coach",
+          "type": "COMMON",
+          "beginOffset": 3553
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.10320499500000001
+    },
+    {
+      "name": "clienti",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.002993542,
+      "mentions": [
+        {
+          "text": "clienti",
+          "type": "COMMON",
+          "beginOffset": 1853
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.10299354200000001
+    },
+    {
+      "name": "strategie",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.002848693,
+      "mentions": [
+        {
+          "text": "strategie",
+          "type": "COMMON",
+          "beginOffset": 1511
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.102848693
+    },
+    {
+      "name": "approccio",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.002753624,
+      "mentions": [
+        {
+          "text": "approccio",
+          "type": "COMMON",
+          "beginOffset": 1082
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.102753624
+    },
+    {
+      "name": "competenze",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0026511885,
+      "mentions": [
+        {
+          "text": "competenze",
+          "type": "COMMON",
+          "beginOffset": 1423
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1026511885
+    },
+    {
+      "name": "definizione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0026469394,
+      "mentions": [
+        {
+          "text": "definizione",
+          "type": "COMMON",
+          "beginOffset": 1737
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10264693940000001
+    },
+    {
+      "name": "obiettivi",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0025168965,
+      "mentions": [
+        {
+          "text": "obiettivi",
+          "type": "COMMON",
+          "beginOffset": 1563
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10251689650000001
+    },
+    {
+      "name": "orientamento",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0024980104,
+      "mentions": [
+        {
+          "text": "orientamento",
+          "type": "COMMON",
+          "beginOffset": 1210
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1024980104
+    },
+    {
+      "name": "futuro",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0024980104,
+      "mentions": [
+        {
+          "text": "futuro",
+          "type": "COMMON",
+          "beginOffset": 1242
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1024980104
+    },
+    {
+      "name": "processo",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0024012208,
+      "mentions": [
+        {
+          "text": "processo",
+          "type": "COMMON",
+          "beginOffset": 1716
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10240122080000001
+    },
+    {
+      "name": "obiettivi",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0023799322,
+      "mentions": [
+        {
+          "text": "obiettivi",
+          "type": "COMMON",
+          "beginOffset": 1003
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10237993220000001
+    },
+    {
+      "name": "tema",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0023243702,
+      "mentions": [
+        {
+          "text": "tema",
+          "type": "COMMON",
+          "beginOffset": 656
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1023243702
+    },
+    {
+      "name": "crescita",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0023110243,
+      "mentions": [
+        {
+          "text": "crescita",
+          "type": "COMMON",
+          "beginOffset": 1453
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10231102430000001
+    },
+    {
+      "name": "coach",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.002307325,
+      "mentions": [
+        {
+          "text": "coach",
+          "type": "COMMON",
+          "beginOffset": 2114
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.102307325
+    },
+    {
+      "name": "aspirazioni",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0022759247,
+      "mentions": [
+        {
+          "text": "aspirazioni",
+          "type": "COMMON",
+          "beginOffset": 1297
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1022759247
+    },
+    {
+      "name": "soluzioni",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0022759247,
+      "mentions": [
+        {
+          "text": "soluzioni",
+          "type": "COMMON",
+          "beginOffset": 1340
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1022759247
+    },
+    {
+      "name": "aspirazioni",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.002246826,
+      "mentions": [
+        {
+          "text": "aspirazioni",
+          "type": "COMMON",
+          "beginOffset": 1886
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.102246826
+    },
+    {
+      "name": "tecniche",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.002246826,
+      "mentions": [
+        {
+          "text": "tecniche",
+          "type": "COMMON",
+          "beginOffset": 1818
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.102246826
+    },
+    {
+      "name": "guarigione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0021774853,
+      "mentions": [
+        {
+          "text": "guarigione",
+          "type": "COMMON",
+          "beginOffset": 1154
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10217748530000001
+    },
+    {
+      "name": "esperienze",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0021774853,
+      "mentions": [
+        {
+          "text": "esperienze",
+          "type": "COMMON",
+          "beginOffset": 1133
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10217748530000001
+    },
+    {
+      "name": "pulsante",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0020931063,
+      "mentions": [
+        {
+          "text": "pulsante",
+          "type": "COMMON",
+          "beginOffset": 1666
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1020931063
+    },
+    {
+      "name": "cuore",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0020931063,
+      "mentions": [
+        {
+          "text": "cuore",
+          "type": "COMMON",
+          "beginOffset": 1660
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1020931063
+    },
+    {
+      "name": "pianificazione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0020931063,
+      "mentions": [
+        {
+          "text": "pianificazione",
+          "type": "COMMON",
+          "beginOffset": 1767
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1020931063
+    },
+    {
+      "name": "Obiettivi",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0020545565,
+      "mentions": [
+        {
+          "text": "Obiettivi",
+          "type": "COMMON",
+          "beginOffset": 1647
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1020545565
+    },
+    {
+      "name": "life coach",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.002014398,
+      "mentions": [
+        {
+          "text": "life coach",
+          "type": "COMMON",
+          "beginOffset": 2594
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.102014398
+    },
+    {
+      "name": "azioni",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0019838768,
+      "mentions": [
+        {
+          "text": "azioni",
+          "type": "COMMON",
+          "beginOffset": 1361
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10198387680000001
+    },
+    {
+      "name": "circostanze",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0019838768,
+      "mentions": [
+        {
+          "text": "circostanze",
+          "type": "COMMON",
+          "beginOffset": 1269
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10198387680000001
+    },
+    {
+      "name": "mete",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0019585094,
+      "mentions": [
+        {
+          "text": "mete",
+          "type": "COMMON",
+          "beginOffset": 1942
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10195850940000001
+    },
+    {
+      "name": "abilità",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0018591018,
+      "mentions": [
+        {
+          "text": "abilità",
+          "type": "COMMON",
+          "beginOffset": 2901
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1018591018
+    },
+    {
+      "name": "applicazione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0018431995,
+      "mentions": [
+        {
+          "text": "applicazione",
+          "type": "COMMON",
+          "beginOffset": 1985
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10184319950000001
+    },
+    {
+      "name": "framework",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0018431995,
+      "mentions": [
+        {
+          "text": "framework",
+          "type": "COMMON",
+          "beginOffset": 2001
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10184319950000001
+    },
+    {
+      "name": "alleanza",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0018274331,
+      "mentions": [
+        {
+          "text": "alleanza",
+          "type": "COMMON",
+          "beginOffset": 1385
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1018274331
+    },
+    {
+      "name": "life coaching",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0018126608,
+      "mentions": [
+        {
+          "text": "life coaching",
+          "type": "COMMON",
+          "beginOffset": 3410
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10181266080000001
+    },
+    {
+      "name": "Definire",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0017935106,
+      "mentions": [
+        {
+          "text": "Definire",
+          "type": "PROPER",
+          "beginOffset": 1624
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.2017935106
+    },
+    {
+      "name": "tecniche",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0017744179,
+      "mentions": [
+        {
+          "text": "tecniche",
+          "type": "COMMON",
+          "beginOffset": 2389
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10177441790000001
+    },
+    {
+      "name": "obiettivi",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0017213284,
+      "mentions": [
+        {
+          "text": "obiettivi",
+          "type": "COMMON",
+          "beginOffset": 2031
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1017213284
+    },
+    {
+      "name": "desideri",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0017205874,
+      "mentions": [
+        {
+          "text": "desideri",
+          "type": "COMMON",
+          "beginOffset": 1924
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1017205874
+    },
+    {
+      "name": "life coach",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.0017110438,
+      "mentions": [
+        {
+          "text": "life coach",
+          "type": "COMMON",
+          "beginOffset": 3964
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.10171104380000001
+    },
+    {
+      "name": "Ascolto",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0015605268,
+      "mentions": [
+        {
+          "text": "Ascolto",
+          "type": "PROPER",
+          "beginOffset": 2513
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.20156052680000003
+    },
+    {
+      "name": "obiettivi",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0015305383,
+      "mentions": [
+        {
+          "text": "obiettivi",
+          "type": "COMMON",
+          "beginOffset": 2581
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1015305383
+    },
+    {
+      "name": "cliente",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.0015170671,
+      "mentions": [
+        {
+          "text": "cliente",
+          "type": "COMMON",
+          "beginOffset": 3051
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.10151706710000001
+    },
+    {
+      "name": "partnership",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0014831289,
+      "mentions": [
+        {
+          "text": "partnership",
+          "type": "COMMON",
+          "beginOffset": 3172
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10148312890000001
+    },
+    {
+      "name": "comprensione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0014767039,
+      "mentions": [
+        {
+          "text": "comprensione",
+          "type": "COMMON",
+          "beginOffset": 2310
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1014767039
+    },
+    {
+      "name": "approccio",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0014360325,
+      "mentions": [
+        {
+          "text": "approccio",
+          "type": "COMMON",
+          "beginOffset": 2670
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10143603250000001
+    },
+    {
+      "name": "Competenze",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.001402312,
+      "mentions": [
+        {
+          "text": "Competenze",
+          "type": "COMMON",
+          "beginOffset": 2486
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10140231200000001
+    },
+    {
+      "name": "cliente",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.0013941145,
+      "mentions": [
+        {
+          "text": "cliente",
+          "type": "COMMON",
+          "beginOffset": 2874
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.10139411450000001
+    },
+    {
+      "name": "obiettivi",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0013940153,
+      "mentions": [
+        {
+          "text": "obiettivi",
+          "type": "COMMON",
+          "beginOffset": 3725
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1013940153
+    },
+    {
+      "name": "ascolto",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.001388251,
+      "mentions": [
+        {
+          "text": "ascolto",
+          "type": "COMMON",
+          "beginOffset": 2401
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10138825100000001
+    },
+    {
+      "name": "cliente",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.0013698591,
+      "mentions": [
+        {
+          "text": "cliente",
+          "type": "COMMON",
+          "beginOffset": 3325
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.1013698591
+    },
+    {
+      "name": "comprensione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0013231749,
+      "mentions": [
+        {
+          "text": "comprensione",
+          "type": "COMMON",
+          "beginOffset": 2737
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10132317490000001
+    },
+    {
+      "name": "clienti",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.0013163183,
+      "mentions": [
+        {
+          "text": "clienti",
+          "type": "COMMON",
+          "beginOffset": 3542
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.1013163183
+    },
+    {
+      "name": "ascolto",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0013052416,
+      "mentions": [
+        {
+          "text": "ascolto",
+          "type": "COMMON",
+          "beginOffset": 2647
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10130524160000001
+    },
+    {
+      "name": "crescita",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0012871679,
+      "mentions": [
+        {
+          "text": "crescita",
+          "type": "COMMON",
+          "beginOffset": 2460
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1012871679
+    },
+    {
+      "name": "terreno",
+      "type": "LOCATION",
+      "typeName": "Location",
+      "salience": 0.0012800093,
+      "mentions": [
+        {
+          "text": "terreno",
+          "type": "COMMON",
+          "beginOffset": 3153
+        }
+      ],
+      "metadata": {},
+      "color": "#388e3c",
+      "confidence": 0.1012800093
+    },
+    {
+      "name": "ascolto",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0012439142,
+      "mentions": [
+        {
+          "text": "ascolto",
+          "type": "COMMON",
+          "beginOffset": 2700
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10124391420000001
+    },
+    {
+      "name": "percorso",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0012346767,
+      "mentions": [
+        {
+          "text": "percorso",
+          "type": "COMMON",
+          "beginOffset": 2156
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10123467670000001
+    },
+    {
+      "name": "Specifici",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0012346767,
+      "mentions": [
+        {
+          "text": "Specifici",
+          "type": "COMMON",
+          "beginOffset": 2048
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10123467670000001
+    },
+    {
+      "name": "Life Coach Crea Partnership",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0012281094,
+      "mentions": [
+        {
+          "text": "Life Coach Crea Partnership",
+          "type": "PROPER",
+          "beginOffset": 3343
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.20122810940000002
+    },
+    {
+      "name": "check-in",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0012201123,
+      "mentions": [
+        {
+          "text": "check-in",
+          "type": "COMMON",
+          "beginOffset": 3794
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10122011230000001
+    },
+    {
+      "name": "definizione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0012102003,
+      "mentions": [
+        {
+          "text": "definizione",
+          "type": "COMMON",
+          "beginOffset": 2563
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10121020030000001
+    },
+    {
+      "name": "strada",
+      "type": "LOCATION",
+      "typeName": "Location",
+      "salience": 0.0011885391,
+      "mentions": [
+        {
+          "text": "strada",
+          "type": "COMMON",
+          "beginOffset": 2297
+        }
+      ],
+      "metadata": {},
+      "color": "#388e3c",
+      "confidence": 0.1011885391
+    },
+    {
+      "name": "processo",
+      "type": "EVENT",
+      "typeName": "Event",
+      "salience": 0.0011676288,
+      "mentions": [
+        {
+          "text": "processo",
+          "type": "COMMON",
+          "beginOffset": 2448
+        }
+      ],
+      "metadata": {},
+      "color": "#7b1fa2",
+      "confidence": 0.1011676288
+    },
+    {
+      "name": "guida",
+      "type": "WORK_OF_ART",
+      "typeName": "Work of Art",
+      "salience": 0.0011676288,
+      "mentions": [
+        {
+          "text": "guida",
+          "type": "COMMON",
+          "beginOffset": 2272
+        }
+      ],
+      "metadata": {},
+      "color": "#c2185b",
+      "confidence": 0.1011676288
+    },
+    {
+      "name": "sfide",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0011610816,
+      "mentions": [
+        {
+          "text": "sfide",
+          "type": "COMMON",
+          "beginOffset": 3663
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10116108160000001
+    },
+    {
+      "name": "successi",
+      "type": "WORK_OF_ART",
+      "typeName": "Work of Art",
+      "salience": 0.0011022405,
+      "mentions": [
+        {
+          "text": "successi",
+          "type": "COMMON",
+          "beginOffset": 3638
+        }
+      ],
+      "metadata": {},
+      "color": "#c2185b",
+      "confidence": 0.10110224050000001
+    },
+    {
+      "name": "Domande",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0010978065,
+      "mentions": [
+        {
+          "text": "Domande",
+          "type": "COMMON",
+          "beginOffset": 2523
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10109780650000001
+    },
+    {
+      "name": "capacità",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0010978065,
+      "mentions": [
+        {
+          "text": "capacità",
+          "type": "COMMON",
+          "beginOffset": 2634
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10109780650000001
+    },
+    {
+      "name": "partnership",
+      "type": "EVENT",
+      "typeName": "Event",
+      "salience": 0.0010889719,
+      "mentions": [
+        {
+          "text": "partnership",
+          "type": "COMMON",
+          "beginOffset": 3484
+        }
+      ],
+      "metadata": {},
+      "color": "#7b1fa2",
+      "confidence": 0.1010889719
+    },
+    {
+      "name": "supporto",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0010889719,
+      "mentions": [
+        {
+          "text": "supporto",
+          "type": "COMMON",
+          "beginOffset": 3452
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1010889719
+    },
+    {
+      "name": "Successo",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0010889719,
+      "mentions": [
+        {
+          "text": "Successo",
+          "type": "COMMON",
+          "beginOffset": 3374
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1010889719
+    },
+    {
+      "name": "individui",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.0010846545,
+      "mentions": [
+        {
+          "text": "individui",
+          "type": "COMMON",
+          "beginOffset": 2132
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.10108465450000001
+    },
+    {
+      "name": "elemento",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0010828361,
+      "mentions": [
+        {
+          "text": "elemento",
+          "type": "COMMON",
+          "beginOffset": 3386
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1010828361
+    },
+    {
+      "name": "risultati",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0010761936,
+      "mentions": [
+        {
+          "text": "risultati",
+          "type": "COMMON",
+          "beginOffset": 2227
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1010761936
+    },
+    {
+      "name": "scadenze",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0010761936,
+      "mentions": [
+        {
+          "text": "scadenze",
+          "type": "COMMON",
+          "beginOffset": 2178
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1010761936
+    },
+    {
+      "name": "Rilevanti",
+      "type": "PERSON",
+      "typeName": "Person",
+      "salience": 0.0010761936,
+      "mentions": [
+        {
+          "text": "Rilevanti",
+          "type": "COMMON",
+          "beginOffset": 2086
+        }
+      ],
+      "metadata": {},
+      "color": "#1976d2",
+      "confidence": 0.1010761936
+    },
+    {
+      "name": "passi",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0010761936,
+      "mentions": [
+        {
+          "text": "passi",
+          "type": "COMMON",
+          "beginOffset": 2201
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1010761936
+    },
+    {
+      "name": "soluzioni",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.001072426,
+      "mentions": [
+        {
+          "text": "soluzioni",
+          "type": "COMMON",
+          "beginOffset": 3083
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.101072426
+    },
+    {
+      "name": "capacità",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0010462222,
+      "mentions": [
+        {
+          "text": "capacità",
+          "type": "COMMON",
+          "beginOffset": 2764
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10104622220000001
+    },
+    {
+      "name": "schemi",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0010462222,
+      "mentions": [
+        {
+          "text": "schemi",
+          "type": "COMMON",
+          "beginOffset": 2789
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10104622220000001
+    },
+    {
+      "name": "pensiero",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0010462222,
+      "mentions": [
+        {
+          "text": "pensiero",
+          "type": "COMMON",
+          "beginOffset": 2799
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10104622220000001
+    },
+    {
+      "name": "responsabilizzazione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0010280175,
+      "mentions": [
+        {
+          "text": "responsabilizzazione",
+          "type": "COMMON",
+          "beginOffset": 3291
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10102801750000001
+    },
+    {
+      "name": "dinamiche",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0010177492,
+      "mentions": [
+        {
+          "text": "dinamiche",
+          "type": "COMMON",
+          "beginOffset": 2343
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1010177492
+    },
+    {
+      "name": "domande",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.001000164,
+      "mentions": [
+        {
+          "text": "domande",
+          "type": "COMMON",
+          "beginOffset": 2925
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.101000164
+    },
+    {
+      "name": "raggiungimento",
+      "type": "EVENT",
+      "typeName": "Event",
+      "salience": 0.0009998699,
+      "mentions": [
+        {
+          "text": "raggiungimento",
+          "type": "COMMON",
+          "beginOffset": 3704
+        }
+      ],
+      "metadata": {},
+      "color": "#7b1fa2",
+      "confidence": 0.10099986990000001
+    },
+    {
+      "name": "progressi",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0009998699,
+      "mentions": [
+        {
+          "text": "progressi",
+          "type": "COMMON",
+          "beginOffset": 3615
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10099986990000001
+    },
+    {
+      "name": "percorso",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0009998699,
+      "mentions": [
+        {
+          "text": "percorso",
+          "type": "COMMON",
+          "beginOffset": 3686
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10099986990000001
+    },
+    {
+      "name": "progressi",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0009647245,
+      "mentions": [
+        {
+          "text": "progressi",
+          "type": "COMMON",
+          "beginOffset": 3820
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1009647245
+    },
+    {
+      "name": "responsabilizzazione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0009647245,
+      "mentions": [
+        {
+          "text": "responsabilizzazione",
+          "type": "COMMON",
+          "beginOffset": 3756
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1009647245
+    },
+    {
+      "name": "momenti",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0009647245,
+      "mentions": [
+        {
+          "text": "momenti",
+          "type": "COMMON",
+          "beginOffset": 3927
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1009647245
+    },
+    {
+      "name": "modo",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0009347629,
+      "mentions": [
+        {
+          "text": "modo",
+          "type": "COMMON",
+          "beginOffset": 3096
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1009347629
+    },
+    {
+      "name": "intuizioni",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0009347629,
+      "mentions": [
+        {
+          "text": "intuizioni",
+          "type": "COMMON",
+          "beginOffset": 3070
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1009347629
+    },
+    {
+      "name": "pensiero",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.000932441,
+      "mentions": [
+        {
+          "text": "pensiero",
+          "type": "COMMON",
+          "beginOffset": 4036
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10093244100000001
+    },
+    {
+      "name": "creazione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0009212694,
+      "mentions": [
+        {
+          "text": "creazione",
+          "type": "COMMON",
+          "beginOffset": 3467
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1009212694
+    },
+    {
+      "name": "situazione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0009119218,
+      "mentions": [
+        {
+          "text": "situazione",
+          "type": "COMMON",
+          "beginOffset": 2851
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10091192180000001
+    },
+    {
+      "name": "motivazioni",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0009119218,
+      "mentions": [
+        {
+          "text": "motivazioni",
+          "type": "COMMON",
+          "beginOffset": 2820
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10091192180000001
+    },
+    {
+      "name": "credenze",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0009119218,
+      "mentions": [
+        {
+          "text": "credenze",
+          "type": "COMMON",
+          "beginOffset": 2809
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10091192180000001
+    },
+    {
+      "name": "sezione",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0008960533,
+      "mentions": [
+        {
+          "text": "sezione",
+          "type": "COMMON",
+          "beginOffset": 3249
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10089605330000001
+    },
+    {
+      "name": "focus",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0008960533,
+      "mentions": [
+        {
+          "text": "focus",
+          "type": "COMMON",
+          "beginOffset": 3266
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10089605330000001
+    },
+    {
+      "name": "pratica",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0008960533,
+      "mentions": [
+        {
+          "text": "pratica",
+          "type": "COMMON",
+          "beginOffset": 3134
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10089605330000001
+    },
+    {
+      "name": "conseguenza",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0008960533,
+      "mentions": [
+        {
+          "text": "conseguenza",
+          "type": "COMMON",
+          "beginOffset": 3114
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10089605330000001
+    },
+    {
+      "name": "riflessioni",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.00087177416,
+      "mentions": [
+        {
+          "text": "riflessioni",
+          "type": "COMMON",
+          "beginOffset": 2981
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10087177416000001
+    },
+    {
+      "name": "uso",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.00087177416,
+      "mentions": [
+        {
+          "text": "uso",
+          "type": "COMMON",
+          "beginOffset": 2918
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10087177416000001
+    },
+    {
+      "name": "convinzioni",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.00087177416,
+      "mentions": [
+        {
+          "text": "convinzioni",
+          "type": "COMMON",
+          "beginOffset": 3011
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10087177416000001
+    },
+    {
+      "name": "sistema",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0008715178,
+      "mentions": [
+        {
+          "text": "sistema",
+          "type": "COMMON",
+          "beginOffset": 3578
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.1008715178
+    },
+    {
+      "name": "metodi",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0008610257,
+      "mentions": [
+        {
+          "text": "metodi",
+          "type": "COMMON",
+          "beginOffset": 3442
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10086102570000001
+    },
+    {
+      "name": "struttura",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0008408827,
+      "mentions": [
+        {
+          "text": "struttura",
+          "type": "COMMON",
+          "beginOffset": 3743
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10084088270000001
+    },
+    {
+      "name": "valutazioni",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0008408827,
+      "mentions": [
+        {
+          "text": "valutazioni",
+          "type": "COMMON",
+          "beginOffset": 3804
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10084088270000001
+    },
+    {
+      "name": "incoraggiamento",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0008408827,
+      "mentions": [
+        {
+          "text": "incoraggiamento",
+          "type": "COMMON",
+          "beginOffset": 3835
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10084088270000001
+    },
+    {
+      "name": "Raggiungibili",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.00083646236,
+      "mentions": [
+        {
+          "text": "Raggiungibili",
+          "type": "PROPER",
+          "beginOffset": 2071
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.20083646236000002
+    },
+    {
+      "name": "momentum",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.00082253,
+      "mentions": [
+        {
+          "text": "momentum",
+          "type": "COMMON",
+          "beginOffset": 3900
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10082253000000001
+    },
+    {
+      "name": "schemi",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.00081913243,
+      "mentions": [
+        {
+          "text": "schemi",
+          "type": "COMMON",
+          "beginOffset": 4026
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10081913243
+    },
+    {
+      "name": "accento",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0007698175,
+      "mentions": [
+        {
+          "text": "accento",
+          "type": "COMMON",
+          "beginOffset": 1329
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.10076981750000001
+    },
+    {
+      "name": "Temporizzati",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0007290815,
+      "mentions": [
+        {
+          "text": "Temporizzati",
+          "type": "PROPER",
+          "beginOffset": 2097
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.20072908150000002
+    },
+    {
+      "name": "SMART",
+      "type": "CONSUMER_GOOD",
+      "typeName": "Consumer Good",
+      "salience": 0.0007290815,
+      "mentions": [
+        {
+          "text": "SMART",
+          "type": "PROPER",
+          "beginOffset": 2041
+        }
+      ],
+      "metadata": {},
+      "color": "#5d4037",
+      "confidence": 0.20072908150000002
+    },
+    {
+      "name": "Misurabili",
+      "type": "OTHER",
+      "typeName": "Other",
+      "salience": 0.0007290815,
+      "mentions": [
+        {
+          "text": "Misurabili",
+          "type": "PROPER",
+          "beginOffset": 2059
+        }
+      ],
+      "metadata": {},
+      "color": "#666666",
+      "confidence": 0.20072908150000002
+    },
+    {
+      "name": "un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 279
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 137
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "una",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "una",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 234
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "Un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "Un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 253
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 50
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 395
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 604
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 766
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 800
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "una",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "una",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 869
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 901
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 933
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 1207
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "una",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "una",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 1449
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 1678
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "una",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "una",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 2306
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "una",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "una",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 2616
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "una",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "una",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 2733
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "Un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "Un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 3383
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "una",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "una",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 3480
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 3575
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    },
+    {
+      "name": "un",
+      "type": "NUMBER",
+      "typeName": "Other",
+      "salience": 0,
+      "mentions": [
+        {
+          "text": "un",
+          "type": "TYPE_UNKNOWN",
+          "beginOffset": 3832
+        }
+      ],
+      "metadata": {
+        "value": "1"
+      },
+      "color": "#666666",
+      "confidence": 0.1
+    }
+  ],
+  "language": "it",
+  "totalEntities": 180,
+  "entityTypes": {
+    "PERSON": {
+      "count": 21,
+      "entities": [
+        {
+          "name": "life coach",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.071713835,
+          "mentions": [
+            {
+              "text": "life coach",
+              "type": "COMMON",
+              "beginOffset": 140
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.171713835
+        },
+        {
+          "name": "Life Coach",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.063138194,
+          "mentions": [
+            {
+              "text": "Life Coach",
+              "type": "PROPER",
+              "beginOffset": 13
+            },
+            {
+              "text": "Life Coach",
+              "type": "PROPER",
+              "beginOffset": 803
+            },
+            {
+              "text": "Life Coach",
+              "type": "PROPER",
+              "beginOffset": 1605
+            },
+            {
+              "text": "Life Coach",
+              "type": "PROPER",
+              "beginOffset": 2501
+            }
+          ],
+          "metadata": {
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Lifestyle_guru",
+            "mid": "/g/11ckrcsx2b"
+          },
+          "color": "#1976d2",
+          "wikipediaUrl": "https://en.wikipedia.org/wiki/Lifestyle_guru",
+          "confidence": 0.563138194
+        },
+        {
+          "name": "persone",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.059055135,
+          "mentions": [
+            {
+              "text": "persone",
+              "type": "COMMON",
+              "beginOffset": 109
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.15905513500000001
+        },
+        {
+          "name": "life coach",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.03665884,
+          "mentions": [
+            {
+              "text": "life coach",
+              "type": "COMMON",
+              "beginOffset": 256
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.13665884
+        },
+        {
+          "name": "life coach",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.027709102,
+          "mentions": [
+            {
+              "text": "life coach",
+              "type": "COMMON",
+              "beginOffset": 398
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.12770910200000002
+        },
+        {
+          "name": "clienti",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.020170122,
+          "mentions": [
+            {
+              "text": "clienti",
+              "type": "COMMON",
+              "beginOffset": 441
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.120170122
+        },
+        {
+          "name": "professionista",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.004199806,
+          "mentions": [
+            {
+              "text": "professionista",
+              "type": "COMMON",
+              "beginOffset": 527
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.104199806
+        },
+        {
+          "name": "life coach",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.0041214325,
+          "mentions": [
+            {
+              "text": "life coach",
+              "type": "COMMON",
+              "beginOffset": 1796
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.1041214325
+        },
+        {
+          "name": "professionista",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.0039412477,
+          "mentions": [
+            {
+              "text": "professionista",
+              "type": "COMMON",
+              "beginOffset": 904
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.1039412477
+        },
+        {
+          "name": "individuo",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.0039412477,
+          "mentions": [
+            {
+              "text": "individuo",
+              "type": "COMMON",
+              "beginOffset": 936
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.1039412477
+        },
+        {
+          "name": "life coach",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.003204995,
+          "mentions": [
+            {
+              "text": "life coach",
+              "type": "COMMON",
+              "beginOffset": 3553
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.10320499500000001
+        },
+        {
+          "name": "clienti",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.002993542,
+          "mentions": [
+            {
+              "text": "clienti",
+              "type": "COMMON",
+              "beginOffset": 1853
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.10299354200000001
+        },
+        {
+          "name": "coach",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.002307325,
+          "mentions": [
+            {
+              "text": "coach",
+              "type": "COMMON",
+              "beginOffset": 2114
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.102307325
+        },
+        {
+          "name": "life coach",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.002014398,
+          "mentions": [
+            {
+              "text": "life coach",
+              "type": "COMMON",
+              "beginOffset": 2594
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.102014398
+        },
+        {
+          "name": "life coach",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.0017110438,
+          "mentions": [
+            {
+              "text": "life coach",
+              "type": "COMMON",
+              "beginOffset": 3964
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.10171104380000001
+        },
+        {
+          "name": "cliente",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.0015170671,
+          "mentions": [
+            {
+              "text": "cliente",
+              "type": "COMMON",
+              "beginOffset": 3051
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.10151706710000001
+        },
+        {
+          "name": "cliente",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.0013941145,
+          "mentions": [
+            {
+              "text": "cliente",
+              "type": "COMMON",
+              "beginOffset": 2874
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.10139411450000001
+        },
+        {
+          "name": "cliente",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.0013698591,
+          "mentions": [
+            {
+              "text": "cliente",
+              "type": "COMMON",
+              "beginOffset": 3325
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.1013698591
+        },
+        {
+          "name": "clienti",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.0013163183,
+          "mentions": [
+            {
+              "text": "clienti",
+              "type": "COMMON",
+              "beginOffset": 3542
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.1013163183
+        },
+        {
+          "name": "individui",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.0010846545,
+          "mentions": [
+            {
+              "text": "individui",
+              "type": "COMMON",
+              "beginOffset": 2132
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.10108465450000001
+        },
+        {
+          "name": "Rilevanti",
+          "type": "PERSON",
+          "typeName": "Person",
+          "salience": 0.0010761936,
+          "mentions": [
+            {
+              "text": "Rilevanti",
+              "type": "COMMON",
+              "beginOffset": 2086
+            }
+          ],
+          "metadata": {},
+          "color": "#1976d2",
+          "confidence": 0.1010761936
+        }
+      ],
+      "averageSalience": 0.014982784419047615
+    },
+    "OTHER": {
+      "count": 127,
+      "entities": [
+        {
+          "name": "complessità",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.06420626,
+          "mentions": [
+            {
+              "text": "complessità",
+              "type": "COMMON",
+              "beginOffset": 79
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.16420626
+        },
+        {
+          "name": "sfide",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.059055135,
+          "mentions": [
+            {
+              "text": "sfide",
+              "type": "COMMON",
+              "beginOffset": 187
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.15905513500000001
+        },
+        {
+          "name": "Ruolo",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.051604196,
+          "mentions": [
+            {
+              "text": "Ruolo",
+              "type": "COMMON",
+              "beginOffset": 3
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.151604196
+        },
+        {
+          "name": "guida",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.050994016,
+          "mentions": [
+            {
+              "text": "guida",
+              "type": "COMMON",
+              "beginOffset": 238
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.150994016
+        },
+        {
+          "name": "epoca",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.044544533,
+          "mentions": [
+            {
+              "text": "epoca",
+              "type": "COMMON",
+              "beginOffset": 55
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.144544533
+        },
+        {
+          "name": "Supporto Personale",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0382472,
+          "mentions": [
+            {
+              "text": "Supporto Personale",
+              "type": "PROPER",
+              "beginOffset": 28
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.23824720000000002
+        },
+        {
+          "name": "supporto",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.022127122,
+          "mentions": [
+            {
+              "text": "supporto",
+              "type": "COMMON",
+              "beginOffset": 282
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.122127122
+        },
+        {
+          "name": "crescita",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.022127122,
+          "mentions": [
+            {
+              "text": "crescita",
+              "type": "COMMON",
+              "beginOffset": 342
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.122127122
+        },
+        {
+          "name": "orientamento",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.02008531,
+          "mentions": [
+            {
+              "text": "orientamento",
+              "type": "COMMON",
+              "beginOffset": 327
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.12008531
+        },
+        {
+          "name": "chiarezza",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.017521482,
+          "mentions": [
+            {
+              "text": "chiarezza",
+              "type": "COMMON",
+              "beginOffset": 316
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.11752148200000001
+        },
+        {
+          "name": "Specializzato",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.015160794,
+          "mentions": [
+            {
+              "text": "Specializzato",
+              "type": "COMMON",
+              "beginOffset": 366
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.11516079400000001
+        },
+        {
+          "name": "benessere",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.01322274,
+          "mentions": [
+            {
+              "text": "benessere",
+              "type": "COMMON",
+              "beginOffset": 384
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.11322274
+        },
+        {
+          "name": "empowerment",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.01322274,
+          "mentions": [
+            {
+              "text": "empowerment",
+              "type": "COMMON",
+              "beginOffset": 425
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.11322274
+        },
+        {
+          "name": "life coaching",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.008203837,
+          "mentions": [
+            {
+              "text": "life coaching",
+              "type": "COMMON",
+              "beginOffset": 682
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10820383700000001
+        },
+        {
+          "name": "life coaching",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0072261193,
+          "mentions": [
+            {
+              "text": "life coaching",
+              "type": "COMMON",
+              "beginOffset": 843
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1072261193
+        },
+        {
+          "name": "vita",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.005569017,
+          "mentions": [
+            {
+              "text": "vita",
+              "type": "COMMON",
+              "beginOffset": 514
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.105569017
+        },
+        {
+          "name": "aspetti",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.005569017,
+          "mentions": [
+            {
+              "text": "aspetti",
+              "type": "COMMON",
+              "beginOffset": 495
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.105569017
+        },
+        {
+          "name": "life coaching",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0053195735,
+          "mentions": [
+            {
+              "text": "life coaching",
+              "type": "COMMON",
+              "beginOffset": 1177
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1053195735
+        },
+        {
+          "name": "scopo",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0052279066,
+          "mentions": [
+            {
+              "text": "scopo",
+              "type": "COMMON",
+              "beginOffset": 625
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1052279066
+        },
+        {
+          "name": "approcci",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.004932779,
+          "mentions": [
+            {
+              "text": "approcci",
+              "type": "COMMON",
+              "beginOffset": 713
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.104932779
+        },
+        {
+          "name": "senso",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.004557642,
+          "mentions": [
+            {
+              "text": "senso",
+              "type": "COMMON",
+              "beginOffset": 616
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.104557642
+        },
+        {
+          "name": "costruzione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.004557642,
+          "mentions": [
+            {
+              "text": "costruzione",
+              "type": "COMMON",
+              "beginOffset": 589
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.104557642
+        },
+        {
+          "name": "felicità",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.004557642,
+          "mentions": [
+            {
+              "text": "felicità",
+              "type": "COMMON",
+              "beginOffset": 574
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.104557642
+        },
+        {
+          "name": "futuro",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0044751847,
+          "mentions": [
+            {
+              "text": "futuro",
+              "type": "COMMON",
+              "beginOffset": 769
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1044751847
+        },
+        {
+          "name": "life coaching",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0044044536,
+          "mentions": [
+            {
+              "text": "life coaching",
+              "type": "COMMON",
+              "beginOffset": 1681
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1044044536
+        },
+        {
+          "name": "successo",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.004323631,
+          "mentions": [
+            {
+              "text": "successo",
+              "type": "COMMON",
+              "beginOffset": 478
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.104323631
+        },
+        {
+          "name": "collaborazione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.004277086,
+          "mentions": [
+            {
+              "text": "collaborazione",
+              "type": "COMMON",
+              "beginOffset": 873
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.104277086
+        },
+        {
+          "name": "Differenze",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0037206283,
+          "mentions": [
+            {
+              "text": "Differenze",
+              "type": "COMMON",
+              "beginOffset": 815
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1037206283
+        },
+        {
+          "name": "potenziale",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0036837673,
+          "mentions": [
+            {
+              "text": "potenziale",
+              "type": "COMMON",
+              "beginOffset": 978
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10368376730000001
+        },
+        {
+          "name": "Terapia",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0034357528,
+          "mentions": [
+            {
+              "text": "Terapia",
+              "type": "COMMON",
+              "beginOffset": 832
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1034357528
+        },
+        {
+          "name": "obiettivi",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.00334715,
+          "mentions": [
+            {
+              "text": "obiettivi",
+              "type": "COMMON",
+              "beginOffset": 1755
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10334715
+        },
+        {
+          "name": "strategie",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.002848693,
+          "mentions": [
+            {
+              "text": "strategie",
+              "type": "COMMON",
+              "beginOffset": 1511
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.102848693
+        },
+        {
+          "name": "approccio",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.002753624,
+          "mentions": [
+            {
+              "text": "approccio",
+              "type": "COMMON",
+              "beginOffset": 1082
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.102753624
+        },
+        {
+          "name": "competenze",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0026511885,
+          "mentions": [
+            {
+              "text": "competenze",
+              "type": "COMMON",
+              "beginOffset": 1423
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1026511885
+        },
+        {
+          "name": "definizione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0026469394,
+          "mentions": [
+            {
+              "text": "definizione",
+              "type": "COMMON",
+              "beginOffset": 1737
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10264693940000001
+        },
+        {
+          "name": "obiettivi",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0025168965,
+          "mentions": [
+            {
+              "text": "obiettivi",
+              "type": "COMMON",
+              "beginOffset": 1563
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10251689650000001
+        },
+        {
+          "name": "orientamento",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0024980104,
+          "mentions": [
+            {
+              "text": "orientamento",
+              "type": "COMMON",
+              "beginOffset": 1210
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1024980104
+        },
+        {
+          "name": "futuro",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0024980104,
+          "mentions": [
+            {
+              "text": "futuro",
+              "type": "COMMON",
+              "beginOffset": 1242
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1024980104
+        },
+        {
+          "name": "processo",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0024012208,
+          "mentions": [
+            {
+              "text": "processo",
+              "type": "COMMON",
+              "beginOffset": 1716
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10240122080000001
+        },
+        {
+          "name": "obiettivi",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0023799322,
+          "mentions": [
+            {
+              "text": "obiettivi",
+              "type": "COMMON",
+              "beginOffset": 1003
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10237993220000001
+        },
+        {
+          "name": "tema",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0023243702,
+          "mentions": [
+            {
+              "text": "tema",
+              "type": "COMMON",
+              "beginOffset": 656
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1023243702
+        },
+        {
+          "name": "crescita",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0023110243,
+          "mentions": [
+            {
+              "text": "crescita",
+              "type": "COMMON",
+              "beginOffset": 1453
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10231102430000001
+        },
+        {
+          "name": "aspirazioni",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0022759247,
+          "mentions": [
+            {
+              "text": "aspirazioni",
+              "type": "COMMON",
+              "beginOffset": 1297
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1022759247
+        },
+        {
+          "name": "soluzioni",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0022759247,
+          "mentions": [
+            {
+              "text": "soluzioni",
+              "type": "COMMON",
+              "beginOffset": 1340
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1022759247
+        },
+        {
+          "name": "aspirazioni",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.002246826,
+          "mentions": [
+            {
+              "text": "aspirazioni",
+              "type": "COMMON",
+              "beginOffset": 1886
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.102246826
+        },
+        {
+          "name": "tecniche",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.002246826,
+          "mentions": [
+            {
+              "text": "tecniche",
+              "type": "COMMON",
+              "beginOffset": 1818
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.102246826
+        },
+        {
+          "name": "guarigione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0021774853,
+          "mentions": [
+            {
+              "text": "guarigione",
+              "type": "COMMON",
+              "beginOffset": 1154
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10217748530000001
+        },
+        {
+          "name": "esperienze",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0021774853,
+          "mentions": [
+            {
+              "text": "esperienze",
+              "type": "COMMON",
+              "beginOffset": 1133
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10217748530000001
+        },
+        {
+          "name": "pulsante",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0020931063,
+          "mentions": [
+            {
+              "text": "pulsante",
+              "type": "COMMON",
+              "beginOffset": 1666
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1020931063
+        },
+        {
+          "name": "cuore",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0020931063,
+          "mentions": [
+            {
+              "text": "cuore",
+              "type": "COMMON",
+              "beginOffset": 1660
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1020931063
+        },
+        {
+          "name": "pianificazione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0020931063,
+          "mentions": [
+            {
+              "text": "pianificazione",
+              "type": "COMMON",
+              "beginOffset": 1767
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1020931063
+        },
+        {
+          "name": "Obiettivi",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0020545565,
+          "mentions": [
+            {
+              "text": "Obiettivi",
+              "type": "COMMON",
+              "beginOffset": 1647
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1020545565
+        },
+        {
+          "name": "azioni",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0019838768,
+          "mentions": [
+            {
+              "text": "azioni",
+              "type": "COMMON",
+              "beginOffset": 1361
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10198387680000001
+        },
+        {
+          "name": "circostanze",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0019838768,
+          "mentions": [
+            {
+              "text": "circostanze",
+              "type": "COMMON",
+              "beginOffset": 1269
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10198387680000001
+        },
+        {
+          "name": "mete",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0019585094,
+          "mentions": [
+            {
+              "text": "mete",
+              "type": "COMMON",
+              "beginOffset": 1942
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10195850940000001
+        },
+        {
+          "name": "abilità",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0018591018,
+          "mentions": [
+            {
+              "text": "abilità",
+              "type": "COMMON",
+              "beginOffset": 2901
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1018591018
+        },
+        {
+          "name": "applicazione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0018431995,
+          "mentions": [
+            {
+              "text": "applicazione",
+              "type": "COMMON",
+              "beginOffset": 1985
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10184319950000001
+        },
+        {
+          "name": "framework",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0018431995,
+          "mentions": [
+            {
+              "text": "framework",
+              "type": "COMMON",
+              "beginOffset": 2001
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10184319950000001
+        },
+        {
+          "name": "alleanza",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0018274331,
+          "mentions": [
+            {
+              "text": "alleanza",
+              "type": "COMMON",
+              "beginOffset": 1385
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1018274331
+        },
+        {
+          "name": "life coaching",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0018126608,
+          "mentions": [
+            {
+              "text": "life coaching",
+              "type": "COMMON",
+              "beginOffset": 3410
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10181266080000001
+        },
+        {
+          "name": "Definire",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0017935106,
+          "mentions": [
+            {
+              "text": "Definire",
+              "type": "PROPER",
+              "beginOffset": 1624
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.2017935106
+        },
+        {
+          "name": "tecniche",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0017744179,
+          "mentions": [
+            {
+              "text": "tecniche",
+              "type": "COMMON",
+              "beginOffset": 2389
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10177441790000001
+        },
+        {
+          "name": "obiettivi",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0017213284,
+          "mentions": [
+            {
+              "text": "obiettivi",
+              "type": "COMMON",
+              "beginOffset": 2031
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1017213284
+        },
+        {
+          "name": "desideri",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0017205874,
+          "mentions": [
+            {
+              "text": "desideri",
+              "type": "COMMON",
+              "beginOffset": 1924
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1017205874
+        },
+        {
+          "name": "Ascolto",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0015605268,
+          "mentions": [
+            {
+              "text": "Ascolto",
+              "type": "PROPER",
+              "beginOffset": 2513
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.20156052680000003
+        },
+        {
+          "name": "obiettivi",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0015305383,
+          "mentions": [
+            {
+              "text": "obiettivi",
+              "type": "COMMON",
+              "beginOffset": 2581
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1015305383
+        },
+        {
+          "name": "partnership",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0014831289,
+          "mentions": [
+            {
+              "text": "partnership",
+              "type": "COMMON",
+              "beginOffset": 3172
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10148312890000001
+        },
+        {
+          "name": "comprensione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0014767039,
+          "mentions": [
+            {
+              "text": "comprensione",
+              "type": "COMMON",
+              "beginOffset": 2310
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1014767039
+        },
+        {
+          "name": "approccio",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0014360325,
+          "mentions": [
+            {
+              "text": "approccio",
+              "type": "COMMON",
+              "beginOffset": 2670
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10143603250000001
+        },
+        {
+          "name": "Competenze",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.001402312,
+          "mentions": [
+            {
+              "text": "Competenze",
+              "type": "COMMON",
+              "beginOffset": 2486
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10140231200000001
+        },
+        {
+          "name": "obiettivi",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0013940153,
+          "mentions": [
+            {
+              "text": "obiettivi",
+              "type": "COMMON",
+              "beginOffset": 3725
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1013940153
+        },
+        {
+          "name": "ascolto",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.001388251,
+          "mentions": [
+            {
+              "text": "ascolto",
+              "type": "COMMON",
+              "beginOffset": 2401
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10138825100000001
+        },
+        {
+          "name": "comprensione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0013231749,
+          "mentions": [
+            {
+              "text": "comprensione",
+              "type": "COMMON",
+              "beginOffset": 2737
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10132317490000001
+        },
+        {
+          "name": "ascolto",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0013052416,
+          "mentions": [
+            {
+              "text": "ascolto",
+              "type": "COMMON",
+              "beginOffset": 2647
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10130524160000001
+        },
+        {
+          "name": "crescita",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0012871679,
+          "mentions": [
+            {
+              "text": "crescita",
+              "type": "COMMON",
+              "beginOffset": 2460
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1012871679
+        },
+        {
+          "name": "ascolto",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0012439142,
+          "mentions": [
+            {
+              "text": "ascolto",
+              "type": "COMMON",
+              "beginOffset": 2700
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10124391420000001
+        },
+        {
+          "name": "percorso",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0012346767,
+          "mentions": [
+            {
+              "text": "percorso",
+              "type": "COMMON",
+              "beginOffset": 2156
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10123467670000001
+        },
+        {
+          "name": "Specifici",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0012346767,
+          "mentions": [
+            {
+              "text": "Specifici",
+              "type": "COMMON",
+              "beginOffset": 2048
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10123467670000001
+        },
+        {
+          "name": "Life Coach Crea Partnership",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0012281094,
+          "mentions": [
+            {
+              "text": "Life Coach Crea Partnership",
+              "type": "PROPER",
+              "beginOffset": 3343
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.20122810940000002
+        },
+        {
+          "name": "check-in",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0012201123,
+          "mentions": [
+            {
+              "text": "check-in",
+              "type": "COMMON",
+              "beginOffset": 3794
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10122011230000001
+        },
+        {
+          "name": "definizione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0012102003,
+          "mentions": [
+            {
+              "text": "definizione",
+              "type": "COMMON",
+              "beginOffset": 2563
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10121020030000001
+        },
+        {
+          "name": "sfide",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0011610816,
+          "mentions": [
+            {
+              "text": "sfide",
+              "type": "COMMON",
+              "beginOffset": 3663
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10116108160000001
+        },
+        {
+          "name": "Domande",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0010978065,
+          "mentions": [
+            {
+              "text": "Domande",
+              "type": "COMMON",
+              "beginOffset": 2523
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10109780650000001
+        },
+        {
+          "name": "capacità",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0010978065,
+          "mentions": [
+            {
+              "text": "capacità",
+              "type": "COMMON",
+              "beginOffset": 2634
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10109780650000001
+        },
+        {
+          "name": "supporto",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0010889719,
+          "mentions": [
+            {
+              "text": "supporto",
+              "type": "COMMON",
+              "beginOffset": 3452
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1010889719
+        },
+        {
+          "name": "Successo",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0010889719,
+          "mentions": [
+            {
+              "text": "Successo",
+              "type": "COMMON",
+              "beginOffset": 3374
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1010889719
+        },
+        {
+          "name": "elemento",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0010828361,
+          "mentions": [
+            {
+              "text": "elemento",
+              "type": "COMMON",
+              "beginOffset": 3386
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1010828361
+        },
+        {
+          "name": "risultati",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0010761936,
+          "mentions": [
+            {
+              "text": "risultati",
+              "type": "COMMON",
+              "beginOffset": 2227
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1010761936
+        },
+        {
+          "name": "scadenze",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0010761936,
+          "mentions": [
+            {
+              "text": "scadenze",
+              "type": "COMMON",
+              "beginOffset": 2178
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1010761936
+        },
+        {
+          "name": "passi",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0010761936,
+          "mentions": [
+            {
+              "text": "passi",
+              "type": "COMMON",
+              "beginOffset": 2201
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1010761936
+        },
+        {
+          "name": "soluzioni",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.001072426,
+          "mentions": [
+            {
+              "text": "soluzioni",
+              "type": "COMMON",
+              "beginOffset": 3083
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.101072426
+        },
+        {
+          "name": "capacità",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0010462222,
+          "mentions": [
+            {
+              "text": "capacità",
+              "type": "COMMON",
+              "beginOffset": 2764
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10104622220000001
+        },
+        {
+          "name": "schemi",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0010462222,
+          "mentions": [
+            {
+              "text": "schemi",
+              "type": "COMMON",
+              "beginOffset": 2789
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10104622220000001
+        },
+        {
+          "name": "pensiero",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0010462222,
+          "mentions": [
+            {
+              "text": "pensiero",
+              "type": "COMMON",
+              "beginOffset": 2799
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10104622220000001
+        },
+        {
+          "name": "responsabilizzazione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0010280175,
+          "mentions": [
+            {
+              "text": "responsabilizzazione",
+              "type": "COMMON",
+              "beginOffset": 3291
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10102801750000001
+        },
+        {
+          "name": "dinamiche",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0010177492,
+          "mentions": [
+            {
+              "text": "dinamiche",
+              "type": "COMMON",
+              "beginOffset": 2343
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1010177492
+        },
+        {
+          "name": "domande",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.001000164,
+          "mentions": [
+            {
+              "text": "domande",
+              "type": "COMMON",
+              "beginOffset": 2925
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.101000164
+        },
+        {
+          "name": "progressi",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0009998699,
+          "mentions": [
+            {
+              "text": "progressi",
+              "type": "COMMON",
+              "beginOffset": 3615
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10099986990000001
+        },
+        {
+          "name": "percorso",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0009998699,
+          "mentions": [
+            {
+              "text": "percorso",
+              "type": "COMMON",
+              "beginOffset": 3686
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10099986990000001
+        },
+        {
+          "name": "progressi",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0009647245,
+          "mentions": [
+            {
+              "text": "progressi",
+              "type": "COMMON",
+              "beginOffset": 3820
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1009647245
+        },
+        {
+          "name": "responsabilizzazione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0009647245,
+          "mentions": [
+            {
+              "text": "responsabilizzazione",
+              "type": "COMMON",
+              "beginOffset": 3756
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1009647245
+        },
+        {
+          "name": "momenti",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0009647245,
+          "mentions": [
+            {
+              "text": "momenti",
+              "type": "COMMON",
+              "beginOffset": 3927
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1009647245
+        },
+        {
+          "name": "modo",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0009347629,
+          "mentions": [
+            {
+              "text": "modo",
+              "type": "COMMON",
+              "beginOffset": 3096
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1009347629
+        },
+        {
+          "name": "intuizioni",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0009347629,
+          "mentions": [
+            {
+              "text": "intuizioni",
+              "type": "COMMON",
+              "beginOffset": 3070
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1009347629
+        },
+        {
+          "name": "pensiero",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.000932441,
+          "mentions": [
+            {
+              "text": "pensiero",
+              "type": "COMMON",
+              "beginOffset": 4036
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10093244100000001
+        },
+        {
+          "name": "creazione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0009212694,
+          "mentions": [
+            {
+              "text": "creazione",
+              "type": "COMMON",
+              "beginOffset": 3467
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1009212694
+        },
+        {
+          "name": "situazione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0009119218,
+          "mentions": [
+            {
+              "text": "situazione",
+              "type": "COMMON",
+              "beginOffset": 2851
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10091192180000001
+        },
+        {
+          "name": "motivazioni",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0009119218,
+          "mentions": [
+            {
+              "text": "motivazioni",
+              "type": "COMMON",
+              "beginOffset": 2820
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10091192180000001
+        },
+        {
+          "name": "credenze",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0009119218,
+          "mentions": [
+            {
+              "text": "credenze",
+              "type": "COMMON",
+              "beginOffset": 2809
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10091192180000001
+        },
+        {
+          "name": "sezione",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0008960533,
+          "mentions": [
+            {
+              "text": "sezione",
+              "type": "COMMON",
+              "beginOffset": 3249
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10089605330000001
+        },
+        {
+          "name": "focus",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0008960533,
+          "mentions": [
+            {
+              "text": "focus",
+              "type": "COMMON",
+              "beginOffset": 3266
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10089605330000001
+        },
+        {
+          "name": "pratica",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0008960533,
+          "mentions": [
+            {
+              "text": "pratica",
+              "type": "COMMON",
+              "beginOffset": 3134
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10089605330000001
+        },
+        {
+          "name": "conseguenza",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0008960533,
+          "mentions": [
+            {
+              "text": "conseguenza",
+              "type": "COMMON",
+              "beginOffset": 3114
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10089605330000001
+        },
+        {
+          "name": "riflessioni",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.00087177416,
+          "mentions": [
+            {
+              "text": "riflessioni",
+              "type": "COMMON",
+              "beginOffset": 2981
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10087177416000001
+        },
+        {
+          "name": "uso",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.00087177416,
+          "mentions": [
+            {
+              "text": "uso",
+              "type": "COMMON",
+              "beginOffset": 2918
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10087177416000001
+        },
+        {
+          "name": "convinzioni",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.00087177416,
+          "mentions": [
+            {
+              "text": "convinzioni",
+              "type": "COMMON",
+              "beginOffset": 3011
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10087177416000001
+        },
+        {
+          "name": "sistema",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0008715178,
+          "mentions": [
+            {
+              "text": "sistema",
+              "type": "COMMON",
+              "beginOffset": 3578
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.1008715178
+        },
+        {
+          "name": "metodi",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0008610257,
+          "mentions": [
+            {
+              "text": "metodi",
+              "type": "COMMON",
+              "beginOffset": 3442
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10086102570000001
+        },
+        {
+          "name": "struttura",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0008408827,
+          "mentions": [
+            {
+              "text": "struttura",
+              "type": "COMMON",
+              "beginOffset": 3743
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10084088270000001
+        },
+        {
+          "name": "valutazioni",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0008408827,
+          "mentions": [
+            {
+              "text": "valutazioni",
+              "type": "COMMON",
+              "beginOffset": 3804
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10084088270000001
+        },
+        {
+          "name": "incoraggiamento",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0008408827,
+          "mentions": [
+            {
+              "text": "incoraggiamento",
+              "type": "COMMON",
+              "beginOffset": 3835
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10084088270000001
+        },
+        {
+          "name": "Raggiungibili",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.00083646236,
+          "mentions": [
+            {
+              "text": "Raggiungibili",
+              "type": "PROPER",
+              "beginOffset": 2071
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.20083646236000002
+        },
+        {
+          "name": "momentum",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.00082253,
+          "mentions": [
+            {
+              "text": "momentum",
+              "type": "COMMON",
+              "beginOffset": 3900
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10082253000000001
+        },
+        {
+          "name": "schemi",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.00081913243,
+          "mentions": [
+            {
+              "text": "schemi",
+              "type": "COMMON",
+              "beginOffset": 4026
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10081913243
+        },
+        {
+          "name": "accento",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0007698175,
+          "mentions": [
+            {
+              "text": "accento",
+              "type": "COMMON",
+              "beginOffset": 1329
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.10076981750000001
+        },
+        {
+          "name": "Temporizzati",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0007290815,
+          "mentions": [
+            {
+              "text": "Temporizzati",
+              "type": "PROPER",
+              "beginOffset": 2097
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.20072908150000002
+        },
+        {
+          "name": "Misurabili",
+          "type": "OTHER",
+          "typeName": "Other",
+          "salience": 0.0007290815,
+          "mentions": [
+            {
+              "text": "Misurabili",
+              "type": "PROPER",
+              "beginOffset": 2059
+            }
+          ],
+          "metadata": {},
+          "color": "#666666",
+          "confidence": 0.20072908150000002
+        }
+      ],
+      "averageSalience": 0.005179283834409448
+    },
+    "EVENT": {
+      "count": 4,
+      "entities": [
+        {
+          "name": "scoperta",
+          "type": "EVENT",
+          "typeName": "Event",
+          "salience": 0.0052279066,
+          "mentions": [
+            {
+              "text": "scoperta",
+              "type": "COMMON",
+              "beginOffset": 554
+            }
+          ],
+          "metadata": {},
+          "color": "#7b1fa2",
+          "confidence": 0.1052279066
+        },
+        {
+          "name": "processo",
+          "type": "EVENT",
+          "typeName": "Event",
+          "salience": 0.0011676288,
+          "mentions": [
+            {
+              "text": "processo",
+              "type": "COMMON",
+              "beginOffset": 2448
+            }
+          ],
+          "metadata": {},
+          "color": "#7b1fa2",
+          "confidence": 0.1011676288
+        },
+        {
+          "name": "partnership",
+          "type": "EVENT",
+          "typeName": "Event",
+          "salience": 0.0010889719,
+          "mentions": [
+            {
+              "text": "partnership",
+              "type": "COMMON",
+              "beginOffset": 3484
+            }
+          ],
+          "metadata": {},
+          "color": "#7b1fa2",
+          "confidence": 0.1010889719
+        },
+        {
+          "name": "raggiungimento",
+          "type": "EVENT",
+          "typeName": "Event",
+          "salience": 0.0009998699,
+          "mentions": [
+            {
+              "text": "raggiungimento",
+              "type": "COMMON",
+              "beginOffset": 3704
+            }
+          ],
+          "metadata": {},
+          "color": "#7b1fa2",
+          "confidence": 0.10099986990000001
+        }
+      ],
+      "averageSalience": 0.0021210943
+    },
+    "LOCATION": {
+      "count": 3,
+      "entities": [
+        {
+          "name": "terreno",
+          "type": "LOCATION",
+          "typeName": "Location",
+          "salience": 0.003217312,
+          "mentions": [
+            {
+              "text": "terreno",
+              "type": "COMMON",
+              "beginOffset": 1499
+            }
+          ],
+          "metadata": {},
+          "color": "#388e3c",
+          "confidence": 0.103217312
+        },
+        {
+          "name": "terreno",
+          "type": "LOCATION",
+          "typeName": "Location",
+          "salience": 0.0012800093,
+          "mentions": [
+            {
+              "text": "terreno",
+              "type": "COMMON",
+              "beginOffset": 3153
+            }
+          ],
+          "metadata": {},
+          "color": "#388e3c",
+          "confidence": 0.1012800093
+        },
+        {
+          "name": "strada",
+          "type": "LOCATION",
+          "typeName": "Location",
+          "salience": 0.0011885391,
+          "mentions": [
+            {
+              "text": "strada",
+              "type": "COMMON",
+              "beginOffset": 2297
+            }
+          ],
+          "metadata": {},
+          "color": "#388e3c",
+          "confidence": 0.1011885391
+        }
+      ],
+      "averageSalience": 0.0018952868
+    },
+    "WORK_OF_ART": {
+      "count": 2,
+      "entities": [
+        {
+          "name": "guida",
+          "type": "WORK_OF_ART",
+          "typeName": "Work of Art",
+          "salience": 0.0011676288,
+          "mentions": [
+            {
+              "text": "guida",
+              "type": "COMMON",
+              "beginOffset": 2272
+            }
+          ],
+          "metadata": {},
+          "color": "#c2185b",
+          "confidence": 0.1011676288
+        },
+        {
+          "name": "successi",
+          "type": "WORK_OF_ART",
+          "typeName": "Work of Art",
+          "salience": 0.0011022405,
+          "mentions": [
+            {
+              "text": "successi",
+              "type": "COMMON",
+              "beginOffset": 3638
+            }
+          ],
+          "metadata": {},
+          "color": "#c2185b",
+          "confidence": 0.10110224050000001
+        }
+      ],
+      "averageSalience": 0.00113493465
+    },
+    "CONSUMER_GOOD": {
+      "count": 1,
+      "entities": [
+        {
+          "name": "SMART",
+          "type": "CONSUMER_GOOD",
+          "typeName": "Consumer Good",
+          "salience": 0.0007290815,
+          "mentions": [
+            {
+              "text": "SMART",
+              "type": "PROPER",
+              "beginOffset": 2041
+            }
+          ],
+          "metadata": {},
+          "color": "#5d4037",
+          "confidence": 0.20072908150000002
+        }
+      ],
+      "averageSalience": 0.0007290815
+    },
+    "NUMBER": {
+      "count": 22,
+      "entities": [
+        {
+          "name": "un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 279
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 137
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "una",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "una",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 234
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "Un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "Un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 253
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 50
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 395
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 604
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 766
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 800
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "una",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "una",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 869
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 901
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 933
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 1207
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "una",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "una",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 1449
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 1678
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "una",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "una",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 2306
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "una",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "una",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 2616
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "una",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "una",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 2733
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "Un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "Un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 3383
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "una",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "una",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 3480
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 3575
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        },
+        {
+          "name": "un",
+          "type": "NUMBER",
+          "typeName": "Other",
+          "salience": 0,
+          "mentions": [
+            {
+              "text": "un",
+              "type": "TYPE_UNKNOWN",
+              "beginOffset": 3832
+            }
+          ],
+          "metadata": {
+            "value": "1"
+          },
+          "color": "#666666",
+          "confidence": 0.1
+        }
+      ],
+      "averageSalience": 0
+    }
+  },
+  "maxSalience": 0.071713835,
+  "minSalience": 0
+}

@@ -34,16 +34,30 @@
                     ></textarea>
                     <div class="input-meta">
                         <span class="character-count">0 characters</span>
-                        <div class="language-selector">
-                            <label for="language-select">Language:</label>
-                            <select id="language-select">
-                                <option value="auto">Auto-detect</option>
-                                <option value="it">Italian</option>
-                                <option value="en">English</option>
-                                <option value="es">Spanish</option>
-                                <option value="fr">French</option>
-                                <option value="de">German</option>
-                            </select>
+                        <div class="input-options">
+                            <div class="language-selector">
+                                <label for="language-select">Language:</label>
+                                <select id="language-select">
+                                    <option value="auto">Auto-detect</option>
+                                    <option value="it">Italian</option>
+                                    <option value="en">English</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="fr">French</option>
+                                    <option value="de">German</option>
+                                </select>
+                            </div>
+                            <div class="deduplication-toggle">
+                                <label for="deduplicate-toggle" class="toggle-label">
+                                    <input type="checkbox" id="deduplicate-toggle" checked>
+                                    <span class="toggle-text">Deduplicate entities</span>
+                                </label>
+                            </div>
+                            <div class="stopword-filter-toggle">
+                                <label for="filter-stopwords-toggle" class="toggle-label">
+                                    <input type="checkbox" id="filter-stopwords-toggle" checked>
+                                    <span class="toggle-text">Filter stopwords</span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,6 +81,12 @@
                     <div class="analysis-info">
                         <span class="detected-language">Language: <span id="detected-language">-</span></span>
                         <span class="entity-count">Entities found: <span id="entity-count">0</span></span>
+                        <span class="deduplication-info" id="deduplication-info" style="display: none;">
+                            Deduplication: <span id="deduplication-stats">-</span>
+                        </span>
+                        <span class="stopword-filter-info" id="stopword-filter-info" style="display: none;">
+                            Stopwords filtered: <span id="stopword-filter-stats">-</span>
+                        </span>
                     </div>
 
                     <div class="entities-container">

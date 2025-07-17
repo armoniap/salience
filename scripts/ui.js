@@ -35,6 +35,16 @@ class UIManager {
       
       errorText: document.getElementById('error-text'),
       
+      // Deduplication elements
+      deduplicateToggle: document.getElementById('deduplicate-toggle'),
+      deduplicationInfo: document.getElementById('deduplication-info'),
+      deduplicationStats: document.getElementById('deduplication-stats'),
+      
+      // Stopword filtering elements
+      filterStopwordsToggle: document.getElementById('filter-stopwords-toggle'),
+      stopwordFilterInfo: document.getElementById('stopword-filter-info'),
+      stopwordFilterStats: document.getElementById('stopword-filter-stats'),
+      
       // API Key elements
       apiKeyStatus: document.getElementById('api-key-status'),
       settingsBtn: document.getElementById('settings-btn'),
@@ -183,6 +193,8 @@ class UIManager {
     
     const text = this.elements.textInput.value.trim();
     const language = this.elements.languageSelect.value;
+    const deduplicate = this.elements.deduplicateToggle.checked;
+    const filterStopwords = this.elements.filterStopwordsToggle.checked;
     
     if (!text) {
       this.showError('Please enter some text to analyze.');
@@ -191,7 +203,7 @@ class UIManager {
 
     // Trigger analysis event
     const event = new CustomEvent('analyzeText', {
-      detail: { text, language }
+      detail: { text, language, deduplicate, filterStopwords }
     });
     document.dispatchEvent(event);
   }
@@ -241,11 +253,28 @@ class UIManager {
   }
 
   populateResults(analysisResult) {
-    const { entities, language, totalEntities } = analysisResult;
+    const { entities, language, totalEntities, deduplicationApplied, originalCount, 
+            stopwordFilteringApplied, filteredCount } = analysisResult;
     
     // Update analysis info
     this.elements.detectedLanguage.textContent = this.getLanguageName(language);
     this.elements.entityCount.textContent = totalEntities;
+    
+    // Show deduplication info if applicable
+    if (deduplicationApplied && originalCount > filteredCount) {
+      this.elements.deduplicationInfo.style.display = 'inline';
+      this.elements.deduplicationStats.textContent = `${filteredCount} → ${totalEntities} entities`;
+    } else {
+      this.elements.deduplicationInfo.style.display = 'none';
+    }
+    
+    // Show stopword filtering info if applicable
+    if (stopwordFilteringApplied && originalCount > filteredCount) {
+      this.elements.stopwordFilterInfo.style.display = 'inline';
+      this.elements.stopwordFilterStats.textContent = `${originalCount} → ${filteredCount} entities`;
+    } else {
+      this.elements.stopwordFilterInfo.style.display = 'none';
+    }
     
     // Populate entities list
     this.populateEntitiesList(entities);
@@ -276,7 +305,7 @@ class UIManager {
 
   createEntityCard(entity) {
     const card = document.createElement('div');
-    card.className = 'entity-card';
+    card.className = entity.isDeduplicated ? 'entity-card deduplicated' : 'entity-card';
     
     const saliencePercentage = (entity.salience * 100).toFixed(1);
     const mentionsText = entity.mentions.map(m => m.text).join(', ');
@@ -294,6 +323,12 @@ class UIManager {
           </div>
         </div>
       </div>
+      
+      ${entity.isDeduplicated ? `
+        <div class="deduplicated-info">
+          Merged from ${entity.originalEntities} entities: ${entity.originalNames.join(', ')}
+        </div>
+      ` : ''}
       
       ${entity.wikipediaUrl ? `
         <div class="entity-metadata">

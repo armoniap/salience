@@ -82,7 +82,7 @@ class SalienceApp {
       return;
     }
 
-    const { text, language } = requestData;
+    const { text, language, deduplicate = true, filterStopwords = true } = requestData;
 
     try {
       // Validate input
@@ -98,7 +98,7 @@ class SalienceApp {
 
       // Perform analysis
       const apiResponse = await this.api.analyzeEntities(text, language);
-      const analysisResult = this.analyzer.processEntities(apiResponse);
+      const analysisResult = this.analyzer.processEntities(apiResponse, { deduplicate, filterStopwords });
 
       // Validate result
       this.analyzer.validateAnalysisResult(analysisResult);
@@ -109,12 +109,28 @@ class SalienceApp {
       // Log success
       console.log('Analysis completed successfully:', {
         entitiesFound: analysisResult.totalEntities,
+        originalCount: analysisResult.originalCount,
+        filteredCount: analysisResult.filteredCount,
+        deduplicationApplied: analysisResult.deduplicationApplied,
+        stopwordFilteringApplied: analysisResult.stopwordFilteringApplied,
         language: analysisResult.language,
         textLength: text.length
       });
 
       // Show success toast
-      this.ui.showToast(`Found ${analysisResult.totalEntities} entities`, 'success');
+      let processingMessage = '';
+      if (analysisResult.stopwordFilteringApplied && analysisResult.originalCount > analysisResult.filteredCount) {
+        processingMessage += ` (${analysisResult.originalCount} filtered to ${analysisResult.filteredCount}`;
+        if (analysisResult.deduplicationApplied && analysisResult.filteredCount > analysisResult.totalEntities) {
+          processingMessage += `, then merged to ${analysisResult.totalEntities})`;
+        } else {
+          processingMessage += ')';
+        }
+      } else if (analysisResult.deduplicationApplied && analysisResult.originalCount > analysisResult.totalEntities) {
+        processingMessage += ` (${analysisResult.originalCount} merged to ${analysisResult.totalEntities})`;
+      }
+      
+      this.ui.showToast(`Found ${analysisResult.totalEntities} entities${processingMessage}`, 'success');
 
     } catch (error) {
       console.error('Analysis failed:', error);

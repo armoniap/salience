@@ -23,10 +23,177 @@ class EntityAnalyzer {
       OTHER: '#666666',
       UNKNOWN: '#999999'
     };
+
+    // Stopwords for different languages
+    this.stopwords = {
+      it: new Set([
+        // Articles
+        'il', 'lo', 'la', 'i', 'gli', 'le', 'un', 'uno', 'una', 'dei', 'degli', 'delle',
+        // Prepositions
+        'di', 'a', 'da', 'in', 'con', 'su', 'per', 'tra', 'fra', 'del', 'dello', 'della',
+        'dall', 'dalla', 'dal', 'dallo', 'nel', 'nello', 'nella', 'nei', 'negli', 'nelle',
+        'col', 'coi', 'sul', 'sullo', 'sulla', 'sui', 'sugli', 'sulle',
+        // Conjunctions
+        'e', 'o', 'ma', 'però', 'quindi', 'perciò', 'infatti', 'inoltre', 'anche', 'pure',
+        'sia', 'oppure', 'ovvero', 'cioè', 'ossia', 'mentre', 'quando', 'se', 'come',
+        // Pronouns
+        'io', 'tu', 'egli', 'ella', 'esso', 'essa', 'noi', 'voi', 'essi', 'esse', 'lui', 'lei',
+        'mi', 'ti', 'ci', 'vi', 'si', 'me', 'te', 'lui', 'lei', 'noi', 'voi', 'loro',
+        'mio', 'tuo', 'suo', 'nostro', 'vostro', 'mia', 'tua', 'sua', 'nostra', 'vostra',
+        'questo', 'questa', 'quello', 'quella', 'questi', 'queste', 'quelli', 'quelle',
+        'che', 'chi', 'cui', 'quale', 'quali', 'quanto', 'quanta', 'quanti', 'quante',
+        // Adverbs
+        'non', 'più', 'molto', 'poco', 'tanto', 'quanto', 'troppo', 'abbastanza', 'piuttosto',
+        'ancora', 'già', 'sempre', 'mai', 'spesso', 'subito', 'presto', 'tardi', 'prima',
+        'dopo', 'poi', 'qui', 'qua', 'là', 'lì', 'dove', 'dovunque', 'ovunque', 'altrove',
+        'sopra', 'sotto', 'dentro', 'fuori', 'davanti', 'dietro', 'accanto', 'insieme',
+        'così', 'bene', 'male', 'meglio', 'peggio', 'forse', 'certamente', 'sicuramente',
+        // Verbs (common forms)
+        'è', 'sono', 'sei', 'siamo', 'siete', 'era', 'erano', 'ero', 'eri', 'eravamo', 'eravate',
+        'sarà', 'saranno', 'sarò', 'sarai', 'saremo', 'sarete', 'sia', 'siano', 'fossi', 'fosse',
+        'ha', 'ho', 'hai', 'abbiamo', 'avete', 'hanno', 'aveva', 'avevo', 'avevi', 'avevamo',
+        'avevate', 'avevano', 'avrà', 'avrò', 'avrai', 'avremo', 'avrete', 'avranno',
+        'fa', 'fai', 'facciamo', 'fate', 'fanno', 'faceva', 'facevo', 'facevi', 'facevamo',
+        'va', 'vai', 'andiamo', 'andate', 'vanno', 'andava', 'andavo', 'andavi', 'andavamo',
+        'dice', 'dico', 'dici', 'diciamo', 'dite', 'dicono', 'diceva', 'dicevo', 'dicevi',
+        'viene', 'vengo', 'vieni', 'veniamo', 'venite', 'vengono', 'veniva', 'venivo',
+        'può', 'posso', 'puoi', 'possiamo', 'potete', 'possono', 'poteva', 'potevo',
+        'deve', 'devo', 'devi', 'dobbiamo', 'dovete', 'devono', 'doveva', 'dovevo',
+        'vuole', 'voglio', 'vuoi', 'vogliamo', 'volete', 'vogliono', 'voleva', 'volevo',
+        // Other common words
+        'cosa', 'cose', 'modo', 'tempo', 'volta', 'volte', 'anno', 'anni', 'giorno', 'giorni',
+        'parte', 'parti', 'caso', 'casi', 'fatto', 'fatti', 'vita', 'mondo', 'paese', 'stati',
+        'stato', 'grande', 'nuovo', 'primo', 'ultimo', 'altro', 'altri', 'altre', 'tutto',
+        'tutti', 'tutte', 'ogni', 'qualche', 'niente', 'nulla', 'qualcosa', 'qualcuno',
+        'nessuno', 'ognuno', 'ciascuno', 'stesso', 'stessa', 'stessi', 'stesse'
+      ]),
+      en: new Set([
+        // Articles
+        'a', 'an', 'the',
+        // Prepositions
+        'in', 'on', 'at', 'by', 'to', 'for', 'of', 'with', 'from', 'up', 'about', 'into',
+        'through', 'during', 'before', 'after', 'above', 'below', 'between', 'among',
+        // Conjunctions
+        'and', 'or', 'but', 'so', 'yet', 'nor', 'for', 'because', 'since', 'as', 'if',
+        'when', 'where', 'while', 'although', 'though', 'unless', 'until', 'whereas',
+        // Pronouns
+        'i', 'you', 'he', 'she', 'it', 'we', 'they', 'me', 'him', 'her', 'us', 'them',
+        'my', 'your', 'his', 'her', 'its', 'our', 'their', 'this', 'that', 'these', 'those',
+        'who', 'whom', 'whose', 'which', 'what', 'where', 'when', 'why', 'how',
+        // Adverbs
+        'not', 'very', 'too', 'so', 'just', 'now', 'then', 'here', 'there', 'where',
+        'how', 'when', 'why', 'what', 'well', 'also', 'only', 'first', 'last', 'next',
+        'new', 'old', 'good', 'bad', 'big', 'small', 'long', 'short', 'high', 'low',
+        // Verbs (common forms)
+        'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'having',
+        'do', 'does', 'did', 'doing', 'will', 'would', 'could', 'should', 'may', 'might',
+        'must', 'can', 'get', 'got', 'go', 'goes', 'went', 'going', 'come', 'came', 'coming',
+        'see', 'saw', 'seen', 'look', 'looking', 'know', 'knew', 'known', 'think', 'thought',
+        'take', 'took', 'taken', 'give', 'gave', 'given', 'make', 'made', 'making',
+        // Other common words
+        'all', 'any', 'some', 'no', 'one', 'two', 'first', 'other', 'many', 'most',
+        'more', 'much', 'way', 'time', 'day', 'year', 'work', 'life', 'world', 'people',
+        'man', 'woman', 'child', 'part', 'place', 'thing', 'right', 'left', 'same',
+        'different', 'each', 'every', 'such', 'own', 'over', 'under', 'again', 'still'
+      ]),
+      es: new Set([
+        // Articles
+        'el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas',
+        // Prepositions
+        'de', 'en', 'a', 'por', 'para', 'con', 'sin', 'sobre', 'bajo', 'entre', 'desde',
+        'hasta', 'durante', 'mediante', 'según', 'contra', 'hacia', 'ante', 'tras',
+        // Conjunctions
+        'y', 'o', 'pero', 'sino', 'aunque', 'porque', 'que', 'si', 'como', 'cuando',
+        'donde', 'mientras', 'pues', 'así', 'también', 'tampoco', 'ni', 'sea', 'bien',
+        // Pronouns
+        'yo', 'tú', 'él', 'ella', 'nosotros', 'vosotros', 'ellos', 'ellas', 'me', 'te',
+        'se', 'nos', 'os', 'le', 'la', 'lo', 'les', 'las', 'los', 'mi', 'tu', 'su',
+        'nuestro', 'vuestro', 'este', 'esta', 'esto', 'estos', 'estas', 'ese', 'esa',
+        'eso', 'esos', 'esas', 'aquel', 'aquella', 'aquello', 'aquellos', 'aquellas',
+        'quien', 'cual', 'cuales', 'cuanto', 'cuanta', 'cuantos', 'cuantas',
+        // Common verbs
+        'es', 'son', 'era', 'eran', 'fue', 'fueron', 'sea', 'sean', 'ser', 'estar',
+        'está', 'están', 'estaba', 'estaban', 'estuvo', 'estuvieron', 'esté', 'estén',
+        'ha', 'han', 'había', 'habían', 'hubo', 'hubieron', 'haya', 'hayan', 'haber',
+        'hace', 'hacen', 'hacía', 'hacían', 'hizo', 'hicieron', 'haga', 'hagan', 'hacer',
+        'va', 'van', 'iba', 'iban', 'fue', 'fueron', 'vaya', 'vayan', 'ir',
+        'dice', 'dicen', 'decía', 'decían', 'dijo', 'dijeron', 'diga', 'digan', 'decir',
+        'viene', 'vienen', 'venía', 'venían', 'vino', 'vinieron', 'venga', 'vengan', 'venir',
+        'puede', 'pueden', 'podía', 'podían', 'pudo', 'pudieron', 'pueda', 'puedan', 'poder',
+        'debe', 'deben', 'debía', 'debían', 'debió', 'debieron', 'deba', 'deban', 'deber',
+        'quiere', 'quieren', 'quería', 'querían', 'quiso', 'quisieron', 'quiera', 'quieran',
+        // Other common words
+        'todo', 'toda', 'todos', 'todas', 'otro', 'otra', 'otros', 'otras', 'mismo',
+        'misma', 'mismos', 'mismas', 'muy', 'más', 'menos', 'tanto', 'tan', 'mucho',
+        'poco', 'algo', 'nada', 'todo', 'cada', 'alguno', 'ninguno', 'cualquier',
+        'bastante', 'demasiado', 'siempre', 'nunca', 'ya', 'aún', 'todavía', 'aquí',
+        'ahí', 'allí', 'donde', 'cuando', 'como', 'así', 'bien', 'mal', 'mejor', 'peor'
+      ]),
+      fr: new Set([
+        // Articles
+        'le', 'la', 'les', 'un', 'une', 'des', 'du', 'de', 'des',
+        // Prepositions
+        'de', 'à', 'dans', 'par', 'pour', 'avec', 'sans', 'sur', 'sous', 'entre',
+        'vers', 'chez', 'depuis', 'pendant', 'avant', 'après', 'contre', 'selon',
+        // Conjunctions
+        'et', 'ou', 'mais', 'car', 'or', 'ni', 'donc', 'que', 'si', 'comme',
+        'quand', 'où', 'tandis', 'bien', 'ainsi', 'aussi', 'encore', 'cependant',
+        // Pronouns
+        'je', 'tu', 'il', 'elle', 'nous', 'vous', 'ils', 'elles', 'me', 'te',
+        'se', 'nous', 'vous', 'le', 'la', 'les', 'lui', 'leur', 'mon', 'ton',
+        'son', 'notre', 'votre', 'leur', 'ce', 'cette', 'ces', 'celui', 'celle',
+        'ceux', 'celles', 'qui', 'que', 'dont', 'où', 'quoi', 'lequel', 'laquelle',
+        // Common verbs
+        'est', 'sont', 'était', 'étaient', 'été', 'être', 'ai', 'as', 'a', 'avons',
+        'avez', 'ont', 'avait', 'avaient', 'eu', 'avoir', 'fait', 'font', 'faisait',
+        'faisaient', 'faire', 'va', 'vont', 'allait', 'allaient', 'allé', 'aller',
+        'dit', 'disent', 'disait', 'disaient', 'dire', 'vient', 'viennent', 'venait',
+        'venaient', 'venu', 'venir', 'peut', 'peuvent', 'pouvait', 'pouvaient', 'pu',
+        'pouvoir', 'doit', 'doivent', 'devait', 'devaient', 'dû', 'devoir', 'veut',
+        'veulent', 'voulait', 'voulaient', 'voulu', 'vouloir', 'sait', 'savent',
+        'savait', 'savaient', 'su', 'savoir', 'prend', 'prennent', 'prenait', 'prenaient',
+        // Other common words
+        'tout', 'toute', 'tous', 'toutes', 'autre', 'autres', 'même', 'mêmes',
+        'très', 'plus', 'moins', 'tant', 'beaucoup', 'peu', 'assez', 'trop',
+        'quelque', 'quelques', 'chaque', 'aucun', 'aucune', 'certains', 'certaines',
+        'plusieurs', 'toujours', 'jamais', 'déjà', 'encore', 'ici', 'là', 'où',
+        'quand', 'comment', 'pourquoi', 'bien', 'mal', 'mieux', 'pire'
+      ]),
+      de: new Set([
+        // Articles
+        'der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem', 'einer', 'eines',
+        // Prepositions
+        'in', 'zu', 'von', 'mit', 'bei', 'nach', 'aus', 'auf', 'für', 'an', 'um', 'über',
+        'unter', 'durch', 'gegen', 'ohne', 'während', 'wegen', 'seit', 'bis', 'vor', 'hinter',
+        // Conjunctions
+        'und', 'oder', 'aber', 'denn', 'doch', 'jedoch', 'sondern', 'dass', 'ob', 'wenn',
+        'als', 'wie', 'weil', 'da', 'obwohl', 'während', 'bevor', 'nachdem', 'damit', 'so',
+        // Pronouns
+        'ich', 'du', 'er', 'sie', 'es', 'wir', 'ihr', 'mich', 'dich', 'sich', 'uns',
+        'euch', 'ihm', 'ihr', 'ihnen', 'mein', 'dein', 'sein', 'ihr', 'unser', 'euer',
+        'dieser', 'diese', 'dieses', 'jener', 'jene', 'jenes', 'welcher', 'welche', 'welches',
+        'wer', 'was', 'wo', 'wann', 'warum', 'wie', 'wieviel', 'welch',
+        // Common verbs
+        'ist', 'sind', 'war', 'waren', 'bin', 'bist', 'sein', 'hat', 'haben', 'hatte',
+        'hatten', 'habe', 'hast', 'wird', 'werden', 'wurde', 'wurden', 'werde', 'wirst',
+        'kann', 'können', 'konnte', 'konnten', 'muss', 'müssen', 'musste', 'mussten',
+        'will', 'wollen', 'wollte', 'wollten', 'soll', 'sollen', 'sollte', 'sollten',
+        'macht', 'machen', 'machte', 'machten', 'geht', 'gehen', 'ging', 'gingen',
+        'kommt', 'kommen', 'kam', 'kamen', 'sagt', 'sagen', 'sagte', 'sagten',
+        'gibt', 'geben', 'gab', 'gaben', 'nimmt', 'nehmen', 'nahm', 'nahmen',
+        // Other common words
+        'alle', 'alles', 'andere', 'anderen', 'anderer', 'anderes', 'viele', 'viel',
+        'wenig', 'wenige', 'mehr', 'weniger', 'sehr', 'zu', 'auch', 'nur', 'noch',
+        'schon', 'immer', 'nie', 'niemals', 'hier', 'da', 'dort', 'wo', 'wohin',
+        'woher', 'wann', 'heute', 'gestern', 'morgen', 'jetzt', 'dann', 'nun',
+        'gut', 'schlecht', 'besser', 'schlechter', 'groß', 'klein', 'neu', 'alt'
+      ])
+    };
   }
 
-  processEntities(apiResponse) {
+  processEntities(apiResponse, options = {}) {
     const { entities, language } = apiResponse;
+    const { deduplicate = true, filterStopwords = true } = options;
     
     if (!entities || entities.length === 0) {
       return {
@@ -35,12 +202,24 @@ class EntityAnalyzer {
         totalEntities: 0,
         entityTypes: {},
         maxSalience: 0,
-        minSalience: 0
+        minSalience: 0,
+        deduplicationApplied: false
       };
     }
 
     const processedEntities = entities.map(entity => this.processEntity(entity));
-    const sortedEntities = processedEntities.sort((a, b) => b.salience - a.salience);
+    
+    // Apply stopword filtering if enabled
+    const filteredEntities = filterStopwords ? 
+      this.filterStopwords(processedEntities, language) : 
+      processedEntities;
+    
+    // Apply deduplication if enabled
+    const finalEntities = deduplicate ? 
+      this.deduplicateEntities(filteredEntities) : 
+      filteredEntities;
+    
+    const sortedEntities = finalEntities.sort((a, b) => b.salience - a.salience);
 
     const entityTypes = this.groupEntitiesByType(sortedEntities);
     const maxSalience = Math.max(...sortedEntities.map(e => e.salience));
@@ -52,7 +231,11 @@ class EntityAnalyzer {
       totalEntities: sortedEntities.length,
       entityTypes,
       maxSalience,
-      minSalience
+      minSalience,
+      deduplicationApplied: deduplicate,
+      stopwordFilteringApplied: filterStopwords,
+      originalCount: processedEntities.length,
+      filteredCount: filteredEntities.length
     };
   }
 
@@ -257,6 +440,307 @@ class EntityAnalyzer {
     }
 
     return true;
+  }
+
+  // Stopword Filtering Methods
+  filterStopwords(entities, language) {
+    const stopwordSet = this.getStopwordsForLanguage(language);
+    if (!stopwordSet || stopwordSet.size === 0) {
+      return entities; // No filtering if no stopwords available
+    }
+
+    return entities.filter(entity => {
+      return !this.isStopwordEntity(entity, stopwordSet);
+    });
+  }
+
+  getStopwordsForLanguage(language) {
+    // Map language codes to stopword sets
+    const languageMap = {
+      'it': 'it',
+      'en': 'en', 
+      'es': 'es',
+      'fr': 'fr',
+      'de': 'de',
+      'italian': 'it',
+      'english': 'en',
+      'spanish': 'es',
+      'french': 'fr',
+      'german': 'de'
+    };
+
+    const normalizedLang = language ? language.toLowerCase() : 'en';
+    const stopwordLang = languageMap[normalizedLang] || 'en';
+    
+    return this.stopwords[stopwordLang] || this.stopwords['en'];
+  }
+
+  isStopwordEntity(entity, stopwordSet) {
+    // Check if entity name (normalized) is a stopword
+    const normalizedName = entity.name.toLowerCase().trim();
+    
+    // Direct stopword check
+    if (stopwordSet.has(normalizedName)) {
+      return true;
+    }
+
+    // Check if all mentions are stopwords
+    const allMentionsAreStopwords = entity.mentions.every(mention => {
+      const normalizedMention = mention.text.toLowerCase().trim();
+      return stopwordSet.has(normalizedMention);
+    });
+
+    if (allMentionsAreStopwords) {
+      return true;
+    }
+
+    // Additional filters for very common, non-meaningful entities
+    if (this.isNonMeaningfulEntity(entity)) {
+      return true;
+    }
+
+    return false;
+  }
+
+  isNonMeaningfulEntity(entity) {
+    const name = entity.name.toLowerCase().trim();
+    
+    // Filter out single characters (unless they're meaningful abbreviations)
+    if (name.length === 1 && !/[a-z]/.test(name)) {
+      return true;
+    }
+
+    // Filter out common punctuation that might be detected as entities
+    if (/^[.,;:!?()[\]{}'"]+$/.test(name)) {
+      return true;
+    }
+
+    // Filter out numbers unless they're significant (dates, years, etc.)
+    if (/^\d+$/.test(name) && name.length < 4) {
+      return true;
+    }
+
+    // Filter out very short entities with low salience (likely noise)
+    if (name.length <= 2 && entity.salience < 0.1) {
+      return true;
+    }
+
+    // Filter out entities that are just whitespace or special characters
+    if (/^\s*$/.test(name) || /^[^\w\s]*$/.test(name)) {
+      return true;
+    }
+
+    // Filter out very generic terms that are not meaningful
+    const genericTerms = ['cosa', 'cose', 'modo', 'tipo', 'tipi', 'parte', 'parti', 
+                         'volta', 'volte', 'fatto', 'fatti', 'idea', 'idee', 'senso',
+                         'thing', 'things', 'way', 'ways', 'part', 'parts', 'time', 'times',
+                         'idea', 'ideas', 'sense', 'point', 'points', 'kind', 'kinds'];
+    
+    if (genericTerms.includes(name)) {
+      return true;
+    }
+
+    return false;
+  }
+
+  // Entity Deduplication Methods
+  deduplicateEntities(entities) {
+    const entityGroups = new Map();
+    
+    // Group entities by normalized name and type
+    entities.forEach(entity => {
+      const normalizedName = this.normalizeEntityName(entity.name);
+      const key = `${normalizedName}|${entity.type}`;
+      
+      if (!entityGroups.has(key)) {
+        entityGroups.set(key, []);
+      }
+      entityGroups.get(key).push(entity);
+    });
+    
+    // Consolidate each group into a single entity
+    const deduplicatedEntities = [];
+    entityGroups.forEach((group, key) => {
+      if (group.length === 1) {
+        // Single entity, no deduplication needed
+        deduplicatedEntities.push(group[0]);
+      } else {
+        // Multiple entities, consolidate them
+        const consolidated = this.consolidateEntityGroup(group);
+        deduplicatedEntities.push(consolidated);
+      }
+    });
+    
+    return deduplicatedEntities;
+  }
+
+  normalizeEntityName(name) {
+    if (!name || typeof name !== 'string') {
+      return '';
+    }
+    
+    // Convert to lowercase for comparison
+    let normalized = name.toLowerCase();
+    
+    // Remove extra whitespace
+    normalized = normalized.trim().replace(/\s+/g, ' ');
+    
+    // Remove common punctuation for comparison
+    normalized = normalized.replace(/[.,;:!?()[\]{}'"]/g, '');
+    
+    // Handle common variations
+    normalized = normalized.replace(/\bdr\b\.?/g, 'doctor');
+    normalized = normalized.replace(/\bmr\b\.?/g, 'mister');
+    normalized = normalized.replace(/\bmrs\b\.?/g, 'missus');
+    normalized = normalized.replace(/\bprof\b\.?/g, 'professor');
+    
+    return normalized;
+  }
+
+  consolidateEntityGroup(entityGroup) {
+    if (!entityGroup || entityGroup.length === 0) {
+      return null;
+    }
+    
+    if (entityGroup.length === 1) {
+      return entityGroup[0];
+    }
+    
+    // Sort by salience to get the most salient entity as base
+    const sortedGroup = entityGroup.sort((a, b) => b.salience - a.salience);
+    const primaryEntity = sortedGroup[0];
+    
+    // Choose the best name (prefer proper nouns, longer names, Wikipedia entities)
+    const bestName = this.chooseBestEntityName(entityGroup);
+    
+    // Combine all mentions
+    const allMentions = [];
+    const mentionTexts = new Set();
+    
+    entityGroup.forEach(entity => {
+      entity.mentions.forEach(mention => {
+        // Avoid duplicate mentions
+        const mentionKey = `${mention.text}|${mention.beginOffset}`;
+        if (!mentionTexts.has(mentionKey)) {
+          mentionTexts.add(mentionKey);
+          allMentions.push(mention);
+        }
+      });
+    });
+    
+    // Sort mentions by position in text
+    allMentions.sort((a, b) => a.beginOffset - b.beginOffset);
+    
+    // Combine salience scores (weighted average)
+    const combinedSalience = this.combineSalienceScores(entityGroup);
+    
+    // Choose the best metadata (prefer entities with Wikipedia URLs)
+    const bestMetadata = this.chooseBestMetadata(entityGroup);
+    
+    // Create consolidated entity
+    const consolidated = {
+      name: bestName,
+      type: primaryEntity.type,
+      typeName: primaryEntity.typeName,
+      salience: combinedSalience,
+      mentions: allMentions,
+      metadata: bestMetadata,
+      color: primaryEntity.color,
+      wikipediaUrl: bestMetadata.wikipedia_url || null,
+      confidence: this.calculateConfidence({
+        salience: combinedSalience,
+        mentions: allMentions,
+        wikipediaUrl: bestMetadata.wikipedia_url
+      }),
+      // Add deduplication info
+      isDeduplicated: true,
+      originalEntities: entityGroup.length,
+      originalNames: entityGroup.map(e => e.name)
+    };
+    
+    return consolidated;
+  }
+
+  chooseBestEntityName(entityGroup) {
+    // Priority order:
+    // 1. Entities with Wikipedia URLs
+    // 2. Proper nouns (PROPER mentions)
+    // 3. Longer names
+    // 4. First occurrence
+    
+    let bestEntity = entityGroup[0];
+    let bestScore = 0;
+    
+    entityGroup.forEach(entity => {
+      let score = 0;
+      
+      // Wikipedia URL bonus
+      if (entity.wikipediaUrl || entity.metadata.wikipedia_url) {
+        score += 100;
+      }
+      
+      // Proper noun bonus
+      const properMentions = entity.mentions.filter(m => m.type === 'PROPER').length;
+      score += properMentions * 10;
+      
+      // Length bonus
+      score += entity.name.length;
+      
+      // Salience bonus
+      score += entity.salience * 50;
+      
+      if (score > bestScore) {
+        bestScore = score;
+        bestEntity = entity;
+      }
+    });
+    
+    return bestEntity.name;
+  }
+
+  combineSalienceScores(entityGroup) {
+    // Use weighted average based on confidence
+    let totalWeightedSalience = 0;
+    let totalWeight = 0;
+    
+    entityGroup.forEach(entity => {
+      const weight = entity.confidence || 1;
+      totalWeightedSalience += entity.salience * weight;
+      totalWeight += weight;
+    });
+    
+    return totalWeight > 0 ? totalWeightedSalience / totalWeight : 0;
+  }
+
+  chooseBestMetadata(entityGroup) {
+    // Prefer metadata with Wikipedia URLs and more information
+    let bestMetadata = {};
+    let bestScore = 0;
+    
+    entityGroup.forEach(entity => {
+      const metadata = entity.metadata || {};
+      let score = 0;
+      
+      // Wikipedia URL is very valuable
+      if (metadata.wikipedia_url) {
+        score += 100;
+      }
+      
+      // MID (Machine ID) is also valuable
+      if (metadata.mid) {
+        score += 50;
+      }
+      
+      // More metadata fields = better
+      score += Object.keys(metadata).length * 5;
+      
+      if (score > bestScore) {
+        bestScore = score;
+        bestMetadata = metadata;
+      }
+    });
+    
+    return bestMetadata;
   }
 }
 

@@ -566,6 +566,73 @@
   border: 1px solid var(--border-color);
 }
 
+/* Toggle Switch */
+.deduplication-toggle,
+.stopword-filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  font-size: var(--font-size-small);
+  color: var(--text-secondary);
+  user-select: none;
+}
+
+.toggle-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.toggle-text {
+  font-weight: 500;
+}
+
+.deduplication-info,
+.stopword-filter-info {
+  font-size: var(--font-size-small);
+  color: var(--text-secondary);
+}
+
+.deduplication-info span,
+.stopword-filter-info span {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.input-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  align-items: flex-start;
+}
+
+/* Deduplicated entity indicators */
+.entity-card.deduplicated {
+  border-left: 4px solid var(--primary-color);
+}
+
+.entity-card.deduplicated .entity-name::after {
+  content: " (merged)";
+  font-size: var(--font-size-small);
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.deduplicated-info {
+  font-size: var(--font-size-small);
+  color: var(--text-secondary);
+  margin-top: var(--spacing-xs);
+  font-style: italic;
+}
+
 /* Modal Animations */
 @keyframes slideIn {
   from {
