@@ -305,30 +305,46 @@ class UIManager {
 
   createEntityCard(entity) {
     const card = document.createElement('div');
-    card.className = entity.isDeduplicated ? 'entity-card deduplicated' : 'entity-card';
+    const baseClass = entity.isDeduplicated ? 'entity-card deduplicated' : 'entity-card';
+    const classificationClass = entity.salienceClassification ? `salience-${entity.salienceClassification.category}` : '';
+    card.className = `${baseClass} ${classificationClass}`;
     
-    const saliencePercentage = (entity.salience * 100).toFixed(1);
-    const mentionsText = entity.mentions.map(m => m.text).join(', ');
+    // Use practical score if available, otherwise convert salience to percentage
+    const displayScore = entity.practicalScore || Math.round(entity.salience * 100);
+    const classification = entity.salienceClassification;
     
     card.innerHTML = `
       <div class="entity-header">
         <div class="entity-info">
           <div class="entity-name">${this.escapeHtml(entity.name)}</div>
           <div class="entity-type entity-type-${entity.type.toLowerCase()}">${entity.typeName}</div>
+          ${classification ? `
+            <div class="salience-classification">
+              <span class="classification-badge" style="background-color: ${classification.color}">
+                ${classification.icon} ${classification.label}
+              </span>
+              <span class="classification-description">${classification.description}</span>
+            </div>
+          ` : ''}
         </div>
         <div class="entity-salience">
-          <div class="salience-score">${saliencePercentage}%</div>
+          <div class="salience-score">${displayScore}/100</div>
           <div class="salience-bar">
-            <div class="salience-fill" style="width: ${saliencePercentage}%"></div>
+            <div class="salience-fill" style="width: ${displayScore}%; background-color: ${classification?.color || '#3182ce'}"></div>
           </div>
         </div>
       </div>
       
       ${entity.isDeduplicated ? `
         <div class="deduplicated-info">
-          Merged from ${entity.originalEntities} entities: ${entity.originalNames.join(', ')}
+          <span class="info-icon">🔗</span> Merged from ${entity.originalEntities} entities: ${entity.originalNames.join(', ')}
         </div>
       ` : ''}
+      
+      ${entity.salienceFactors ? this.createFactorsSection(entity.salienceFactors) : ''}
+      
+      ${entity.optimizationSuggestions && entity.optimizationSuggestions.length > 0 ? 
+        this.createSuggestionsSection(entity.optimizationSuggestions) : ''}
       
       ${entity.wikipediaUrl ? `
         <div class="entity-metadata">
@@ -339,16 +355,139 @@ class UIManager {
       ` : ''}
       
       <div class="entity-mentions">
-        <div class="entity-mentions-title">Mentions (${entity.mentions.length}):</div>
+        <div class="entity-mentions-title">
+          <span>Mentions (${entity.mentions.length})</span>
+          ${entity.salienceFactors?.mentionTypes ? `
+            <span class="mentions-quality ${entity.salienceFactors.mentionTypes.quality}">
+              ${entity.salienceFactors.mentionTypes.description}
+            </span>
+          ` : ''}
+        </div>
         <div class="entity-mentions-list">
-          ${entity.mentions.map(mention => `
-            <span class="mention-tag">${this.escapeHtml(mention.text)}</span>
+          ${entity.mentions.map((mention, index) => `
+            <span class="mention-tag ${mention.type?.toLowerCase() || 'common'}" 
+                  title="Position: ${mention.beginOffset}, Type: ${mention.type}">
+              ${this.escapeHtml(mention.text)}
+            </span>
           `).join('')}
         </div>
       </div>
     `;
     
+    // Add event listeners for interactive elements
+    this.addCardEventListeners(card);
+    
     return card;
+  }
+
+  createFactorsSection(factors) {
+    return `
+      <div class="salience-factors">
+        <div class="factors-header">
+          <span class="factors-title">📊 Analisi Fattori</span>
+          <button class="toggle-factors">
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        <div class="factors-content">
+          <div class="factor-item">
+            <span class="factor-label">Frequenza:</span>
+            <span class="factor-value ${factors.frequency.rating}">${factors.frequency.description}</span>
+          </div>
+          <div class="factor-item">
+            <span class="factor-label">Posizione:</span>
+            <span class="factor-value">${factors.position.description}</span>
+          </div>
+          <div class="factor-item">
+            <span class="factor-label">Contesto:</span>
+            <span class="factor-value">${factors.context.description}</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  createSuggestionsSection(suggestions) {
+    const highPriority = suggestions.filter(s => s.priority === 'high');
+    const otherSuggestions = suggestions.filter(s => s.priority !== 'high');
+    
+    return `
+      <div class="optimization-suggestions">
+        <div class="suggestions-header">
+          <span class="suggestions-title">💡 Suggerimenti</span>
+          <button class="toggle-suggestions">
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        <div class="suggestions-content">
+          ${highPriority.map(suggestion => `
+            <div class="suggestion-item priority-${suggestion.priority}">
+              <div class="suggestion-header">
+                <span class="suggestion-icon">${suggestion.icon}</span>
+                <span class="suggestion-title">${suggestion.title}</span>
+                <span class="suggestion-priority ${suggestion.priority}">${suggestion.priority.toUpperCase()}</span>
+              </div>
+              <div class="suggestion-description">${suggestion.description}</div>
+              <div class="suggestion-actionable">${suggestion.actionable}</div>
+            </div>
+          `).join('')}
+          ${otherSuggestions.length > 0 ? `
+            <div class="more-suggestions">
+              <button class="show-all-suggestions">
+                +${otherSuggestions.length} altri suggerimenti
+              </button>
+              <div class="additional-suggestions">
+                ${otherSuggestions.map(suggestion => `
+                  <div class="suggestion-item priority-${suggestion.priority}">
+                    <div class="suggestion-header">
+                      <span class="suggestion-icon">${suggestion.icon}</span>
+                      <span class="suggestion-title">${suggestion.title}</span>
+                    </div>
+                    <div class="suggestion-description">${suggestion.description}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      </div>
+    `;
+  }
+
+  addCardEventListeners(card) {
+    // Toggle factors section
+    const factorsToggle = card.querySelector('.toggle-factors');
+    if (factorsToggle) {
+      factorsToggle.addEventListener('click', () => {
+        const factorsSection = card.querySelector('.salience-factors');
+        factorsSection.classList.toggle('expanded');
+      });
+    }
+
+    // Toggle suggestions section
+    const suggestionsToggle = card.querySelector('.toggle-suggestions');
+    if (suggestionsToggle) {
+      suggestionsToggle.addEventListener('click', () => {
+        const suggestionsSection = card.querySelector('.optimization-suggestions');
+        suggestionsSection.classList.toggle('expanded');
+      });
+    }
+
+    // Show all suggestions button
+    const showAllButton = card.querySelector('.show-all-suggestions');
+    if (showAllButton) {
+      showAllButton.addEventListener('click', () => {
+        const suggestionsSection = card.querySelector('.optimization-suggestions');
+        suggestionsSection.classList.toggle('show-all');
+        
+        // Update button text
+        const isShowingAll = suggestionsSection.classList.contains('show-all');
+        const otherSuggestionsCount = card.querySelectorAll('.additional-suggestions .suggestion-item').length;
+        showAllButton.textContent = isShowingAll ? 
+          'Nascondi suggerimenti aggiuntivi' : 
+          `+${otherSuggestionsCount} altri suggerimenti`;
+      });
+    }
   }
 
   populateHighlightedText(originalText, entities) {

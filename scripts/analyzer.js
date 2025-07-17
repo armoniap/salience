@@ -221,14 +221,17 @@ class EntityAnalyzer {
     
     const sortedEntities = finalEntities.sort((a, b) => b.salience - a.salience);
 
-    const entityTypes = this.groupEntitiesByType(sortedEntities);
-    const maxSalience = Math.max(...sortedEntities.map(e => e.salience));
-    const minSalience = Math.min(...sortedEntities.map(e => e.salience));
+    // Enhance entities with intelligence features
+    const enhancedEntities = this.enhanceEntitiesWithIntelligence(sortedEntities, apiResponse.originalText || '');
+
+    const entityTypes = this.groupEntitiesByType(enhancedEntities);
+    const maxSalience = Math.max(...enhancedEntities.map(e => e.salience));
+    const minSalience = Math.min(...enhancedEntities.map(e => e.salience));
 
     return {
-      entities: sortedEntities,
+      entities: enhancedEntities,
       language,
-      totalEntities: sortedEntities.length,
+      totalEntities: enhancedEntities.length,
       entityTypes,
       maxSalience,
       minSalience,
@@ -266,6 +269,322 @@ class EntityAnalyzer {
     processed.confidence = this.calculateConfidence(processed);
 
     return processed;
+  }
+
+  enhanceEntitiesWithIntelligence(entities, originalText) {
+    return entities.map(entity => {
+      const enhanced = { ...entity };
+      
+      // Add salience classification
+      enhanced.salienceClassification = this.classifySalience(entity.salience, entities);
+      
+      // Add factor analysis
+      enhanced.salienceFactors = this.analyzeSalienceFactors(entity, originalText);
+      
+      // Add optimization suggestions
+      enhanced.optimizationSuggestions = this.generateOptimizationSuggestions(entity, originalText);
+      
+      // Add practical score (0-100)
+      enhanced.practicalScore = this.calculatePracticalScore(entity, entities);
+      
+      return enhanced;
+    });
+  }
+
+  classifySalience(salience, allEntities) {
+    // Calculate percentiles within the text
+    const sortedSaliences = allEntities.map(e => e.salience).sort((a, b) => b - a);
+    const percentile = (sortedSaliences.indexOf(salience) / sortedSaliences.length) * 100;
+    
+    // Define classification based on both absolute values and relative position
+    if (salience >= 0.15 || percentile <= 5) {
+      return {
+        category: 'dominant',
+        label: 'Dominante',
+        icon: '🔥',
+        description: 'Entità centrale del testo',
+        color: '#e53e3e',
+        score: 100
+      };
+    } else if (salience >= 0.08 || percentile <= 15) {
+      return {
+        category: 'prominent',
+        label: 'Prominente', 
+        icon: '⭐',
+        description: 'Entità molto importante',
+        color: '#dd6b20',
+        score: 85
+      };
+    } else if (salience >= 0.04 || percentile <= 35) {
+      return {
+        category: 'relevant',
+        label: 'Rilevante',
+        icon: '📈',
+        description: 'Entità significativa',
+        color: '#38a169',
+        score: 65
+      };
+    } else if (salience >= 0.02 || percentile <= 60) {
+      return {
+        category: 'present',
+        label: 'Presente',
+        icon: '📊',
+        description: 'Entità menzionata',
+        color: '#3182ce',
+        score: 45
+      };
+    } else {
+      return {
+        category: 'marginal',
+        label: 'Marginale',
+        icon: '👻',
+        description: 'Entità poco rilevante',
+        color: '#718096',
+        score: 20
+      };
+    }
+  }
+
+  analyzeSalienceFactors(entity, originalText) {
+    const factors = {
+      frequency: this.analyzeFrequency(entity),
+      position: this.analyzePosition(entity, originalText),
+      context: this.analyzeContext(entity, originalText),
+      mentionTypes: this.analyzeMentionTypes(entity),
+      cooccurrence: this.analyzeCooccurrence(entity, originalText)
+    };
+    
+    return factors;
+  }
+
+  analyzeFrequency(entity) {
+    const mentionCount = entity.mentions.length;
+    let rating, description;
+    
+    if (mentionCount >= 8) {
+      rating = 'high';
+      description = `Ottima frequenza (${mentionCount} mentions)`;
+    } else if (mentionCount >= 4) {
+      rating = 'medium';
+      description = `Buona frequenza (${mentionCount} mentions)`;
+    } else if (mentionCount >= 2) {
+      rating = 'low';
+      description = `Frequenza bassa (${mentionCount} mentions)`;
+    } else {
+      rating = 'very_low';
+      description = `Frequenza molto bassa (${mentionCount} mention)`;
+    }
+    
+    return {
+      count: mentionCount,
+      rating,
+      description,
+      score: Math.min(mentionCount * 10, 100)
+    };
+  }
+
+  analyzePosition(entity, originalText) {
+    const textLength = originalText.length;
+    let positionScores = [];
+    let inTitle = false;
+    let inFirstParagraph = false;
+    
+    entity.mentions.forEach(mention => {
+      const position = mention.beginOffset;
+      const relativePosition = position / textLength;
+      
+      // Check if in title (first 100 characters)
+      if (position < 100) {
+        inTitle = true;
+        positionScores.push(100);
+      }
+      // Check if in first paragraph (first 20% of text)
+      else if (relativePosition < 0.2) {
+        inFirstParagraph = true;
+        positionScores.push(80);
+      }
+      // Early in text
+      else if (relativePosition < 0.5) {
+        positionScores.push(60);
+      }
+      // Later in text
+      else {
+        positionScores.push(30);
+      }
+    });
+    
+    const avgScore = positionScores.reduce((a, b) => a + b, 0) / positionScores.length;
+    
+    let description = [];
+    if (inTitle) description.push('Nel titolo/inizio');
+    if (inFirstParagraph) description.push('Nel primo paragrafo');
+    if (description.length === 0) description.push('Distribuito nel testo');
+    
+    return {
+      inTitle,
+      inFirstParagraph,
+      averageScore: avgScore,
+      description: description.join(', '),
+      positions: entity.mentions.map(m => ({
+        offset: m.beginOffset,
+        relative: m.beginOffset / textLength,
+        text: m.text
+      }))
+    };
+  }
+
+  analyzeContext(entity, originalText) {
+    // Analyze the context around each mention
+    const contexts = entity.mentions.map(mention => {
+      const start = Math.max(0, mention.beginOffset - 50);
+      const end = Math.min(originalText.length, mention.beginOffset + mention.text.length + 50);
+      const context = originalText.substring(start, end);
+      
+      return {
+        text: context,
+        beforeText: originalText.substring(start, mention.beginOffset),
+        afterText: originalText.substring(mention.beginOffset + mention.text.length, end)
+      };
+    });
+    
+    return {
+      contexts,
+      uniqueContexts: contexts.length,
+      description: `Appare in ${contexts.length} contesti diversi`
+    };
+  }
+
+  analyzeMentionTypes(entity) {
+    const properCount = entity.mentions.filter(m => m.type === 'PROPER').length;
+    const commonCount = entity.mentions.filter(m => m.type === 'COMMON').length;
+    const total = entity.mentions.length;
+    
+    const properRatio = properCount / total;
+    
+    let quality, description;
+    if (properRatio >= 0.7) {
+      quality = 'high';
+      description = `Prevalentemente nome proprio (${properCount}/${total})`;
+    } else if (properRatio >= 0.3) {
+      quality = 'medium';
+      description = `Mix nome proprio/comune (${properCount}/${total})`;
+    } else {
+      quality = 'low';
+      description = `Prevalentemente nome comune (${properCount}/${total})`;
+    }
+    
+    return {
+      proper: properCount,
+      common: commonCount,
+      properRatio,
+      quality,
+      description
+    };
+  }
+
+  analyzeCooccurrence(entity, originalText) {
+    // Simplified co-occurrence analysis
+    // In a full implementation, this would analyze which other entities appear near this one
+    return {
+      description: 'Analisi co-occorrenza disponibile',
+      nearbyEntities: [] // Placeholder for future implementation
+    };
+  }
+
+  generateOptimizationSuggestions(entity, originalText) {
+    const suggestions = [];
+    const factors = this.analyzeSalienceFactors(entity, originalText);
+    const classification = this.classifySalience(entity.salience, [entity]);
+    
+    // Frequency suggestions
+    if (factors.frequency.rating === 'very_low' || factors.frequency.rating === 'low') {
+      suggestions.push({
+        type: 'frequency',
+        priority: 'high',
+        icon: '🔄',
+        title: 'Aumenta la frequenza',
+        description: `Menziona "${entity.name}" più spesso nel testo per aumentarne l'importanza`,
+        actionable: `Target: 4-6 mentions invece di ${factors.frequency.count}`
+      });
+    }
+    
+    // Position suggestions
+    if (!factors.position.inTitle && classification.category !== 'dominant') {
+      suggestions.push({
+        type: 'position',
+        priority: 'high',
+        icon: '📍',
+        title: 'Migliora il posizionamento',
+        description: `Inserisci "${entity.name}" nel titolo o nei primi 100 caratteri`,
+        actionable: 'Le entità menzionate all\'inizio hanno maggiore salienza'
+      });
+    }
+    
+    if (!factors.position.inFirstParagraph) {
+      suggestions.push({
+        type: 'position',
+        priority: 'medium',
+        icon: '📝',
+        title: 'Rafforza l\'introduzione',
+        description: `Menziona "${entity.name}" nel primo paragrafo`,
+        actionable: 'Il posizionamento precoce aumenta la salienza'
+      });
+    }
+    
+    // Mention type suggestions
+    if (factors.mentionTypes.quality === 'low') {
+      suggestions.push({
+        type: 'mention_type',
+        priority: 'medium',
+        icon: '🔤',
+        title: 'Usa come nome proprio',
+        description: `Scrivi "${entity.name}" con le maiuscole quando possibile`,
+        actionable: 'I nomi propri hanno maggiore peso nell\'analisi'
+      });
+    }
+    
+    // Context suggestions
+    if (classification.category === 'marginal' || classification.category === 'present') {
+      suggestions.push({
+        type: 'context',
+        priority: 'medium',
+        icon: '🎯',
+        title: 'Raggruppa contenuti correlati',
+        description: `Crea sezioni dedicate a "${entity.name}"`,
+        actionable: 'Raggruppa informazioni correlate per aumentare il focus'
+      });
+    }
+    
+    // Wikipedia/Authority suggestions
+    if (!entity.wikipediaUrl && classification.category !== 'marginal') {
+      suggestions.push({
+        type: 'authority',
+        priority: 'low',
+        icon: '🔗',
+        title: 'Aggiungi autorevolezza',
+        description: `"${entity.name}" potrebbe beneficiare di link esterni autorevoli`,
+        actionable: 'I link a fonti autorevoli aumentano la credibilità'
+      });
+    }
+    
+    // Positive feedback for good entities
+    if (classification.category === 'dominant' || classification.category === 'prominent') {
+      suggestions.push({
+        type: 'positive',
+        priority: 'info',
+        icon: '✅',
+        title: 'Ottima performance',
+        description: `"${entity.name}" ha un'eccellente salienza nel testo`,
+        actionable: 'Mantieni questa strategia per altre entità importanti'
+      });
+    }
+    
+    return suggestions;
+  }
+
+  calculatePracticalScore(entity, allEntities) {
+    const classification = this.classifySalience(entity.salience, allEntities);
+    return classification.score;
   }
 
   calculateConfidence(entity) {
@@ -545,33 +864,141 @@ class EntityAnalyzer {
 
   // Entity Deduplication Methods
   deduplicateEntities(entities) {
-    const entityGroups = new Map();
-    
-    // Group entities by normalized name and type
+    // First pass: exact normalized matches
+    const exactGroups = new Map();
     entities.forEach(entity => {
       const normalizedName = this.normalizeEntityName(entity.name);
       const key = `${normalizedName}|${entity.type}`;
       
-      if (!entityGroups.has(key)) {
-        entityGroups.set(key, []);
+      if (!exactGroups.has(key)) {
+        exactGroups.set(key, []);
       }
-      entityGroups.get(key).push(entity);
+      exactGroups.get(key).push(entity);
     });
     
-    // Consolidate each group into a single entity
-    const deduplicatedEntities = [];
-    entityGroups.forEach((group, key) => {
+    // Consolidate exact matches
+    const exactlyDeduplicated = [];
+    exactGroups.forEach((group, key) => {
       if (group.length === 1) {
-        // Single entity, no deduplication needed
-        deduplicatedEntities.push(group[0]);
+        exactlyDeduplicated.push(group[0]);
       } else {
-        // Multiple entities, consolidate them
         const consolidated = this.consolidateEntityGroup(group);
-        deduplicatedEntities.push(consolidated);
+        exactlyDeduplicated.push(consolidated);
       }
     });
     
-    return deduplicatedEntities;
+    // Second pass: similarity and containment matching
+    const finalDeduplication = this.applySimilarityDeduplication(exactlyDeduplicated);
+    
+    return finalDeduplication;
+  }
+
+  applySimilarityDeduplication(entities) {
+    const result = [];
+    const processed = new Set();
+    
+    entities.forEach((entity, index) => {
+      if (processed.has(index)) return;
+      
+      // Find similar entities
+      const similarEntities = [entity];
+      const similarIndices = [index];
+      
+      for (let i = index + 1; i < entities.length; i++) {
+        if (processed.has(i)) continue;
+        
+        const otherEntity = entities[i];
+        if (this.areEntitiesSimilar(entity, otherEntity)) {
+          similarEntities.push(otherEntity);
+          similarIndices.push(i);
+        }
+      }
+      
+      // Mark all similar entities as processed
+      similarIndices.forEach(idx => processed.add(idx));
+      
+      // Consolidate similar entities
+      if (similarEntities.length === 1) {
+        result.push(entity);
+      } else {
+        const consolidated = this.consolidateEntityGroup(similarEntities);
+        result.push(consolidated);
+      }
+    });
+    
+    return result;
+  }
+
+  areEntitiesSimilar(entity1, entity2) {
+    // Must be same type
+    if (entity1.type !== entity2.type) {
+      return false;
+    }
+    
+    const name1 = entity1.name.toLowerCase();
+    const name2 = entity2.name.toLowerCase();
+    
+    // Check for containment (coach vs life coach)
+    if (name1.includes(name2) || name2.includes(name1)) {
+      return true;
+    }
+    
+    // Check for word overlap (significant overlap indicates similarity)
+    const words1 = new Set(name1.split(/\s+/));
+    const words2 = new Set(name2.split(/\s+/));
+    
+    const intersection = new Set([...words1].filter(word => words2.has(word)));
+    const union = new Set([...words1, ...words2]);
+    
+    // Jaccard similarity threshold
+    const similarity = intersection.size / union.size;
+    
+    // Consider similar if >50% word overlap
+    if (similarity > 0.5) {
+      return true;
+    }
+    
+    // Check for stemmed similarity
+    const stemmed1 = this.applyStemming(name1);
+    const stemmed2 = this.applyStemming(name2);
+    
+    if (stemmed1 === stemmed2) {
+      return true;
+    }
+    
+    // Check for common entity patterns
+    if (this.hasCommonEntityPattern(name1, name2)) {
+      return true;
+    }
+    
+    return false;
+  }
+
+  hasCommonEntityPattern(name1, name2) {
+    // Common patterns that indicate same entity
+    const patterns = [
+      // Professional titles
+      { base: /\b(coach|coaching)\b/, variants: ['coach', 'coaching', 'life coach', 'life coaching'] },
+      { base: /\b(consulente|consulenza)\b/, variants: ['consulente', 'consulenza'] },
+      { base: /\b(manager|management)\b/, variants: ['manager', 'management'] },
+      { base: /\b(trainer|training)\b/, variants: ['trainer', 'training'] },
+      
+      // Business terms
+      { base: /\b(azienda|aziendale)\b/, variants: ['azienda', 'aziendale'] },
+      { base: /\b(impresa|imprenditore)\b/, variants: ['impresa', 'imprenditore'] },
+      { base: /\b(business|businessman)\b/, variants: ['business', 'businessman'] },
+      
+      // Generic terms
+      { base: /\b(persona|persone)\b/, variants: ['persona', 'persone'] },
+      { base: /\b(cliente|clienti)\b/, variants: ['cliente', 'clienti'] },
+      { base: /\b(servizio|servizi)\b/, variants: ['servizio', 'servizi'] }
+    ];
+    
+    return patterns.some(pattern => {
+      const matches1 = pattern.variants.some(variant => name1.includes(variant));
+      const matches2 = pattern.variants.some(variant => name2.includes(variant));
+      return matches1 && matches2;
+    });
   }
 
   normalizeEntityName(name) {
@@ -588,13 +1015,43 @@ class EntityAnalyzer {
     // Remove common punctuation for comparison
     normalized = normalized.replace(/[.,;:!?()[\]{}'"]/g, '');
     
-    // Handle common variations
+    // Handle common variations and abbreviations
     normalized = normalized.replace(/\bdr\b\.?/g, 'doctor');
     normalized = normalized.replace(/\bmr\b\.?/g, 'mister');
     normalized = normalized.replace(/\bmrs\b\.?/g, 'missus');
     normalized = normalized.replace(/\bprof\b\.?/g, 'professor');
     
+    // Apply stemming-like transformations for better matching
+    normalized = this.applyStemming(normalized);
+    
     return normalized;
+  }
+
+  applyStemming(text) {
+    // Simple stemming rules for Italian and English
+    let stemmed = text;
+    
+    // Italian plural/singular forms
+    stemmed = stemmed.replace(/\b(\w+)i\b/g, '$1o'); // libri -> libro
+    stemmed = stemmed.replace(/\b(\w+)e\b/g, '$1a'); // persone -> persona (sometimes)
+    stemmed = stemmed.replace(/\b(\w+)zioni\b/g, '$1zione'); // informazioni -> informazione
+    stemmed = stemmed.replace(/\b(\w+)ioni\b/g, '$1ione'); // opinioni -> opinione
+    
+    // English plural/singular forms
+    stemmed = stemmed.replace(/\b(\w+)s\b/g, '$1'); // coaches -> coach
+    stemmed = stemmed.replace(/\b(\w+)es\b/g, '$1'); // businesses -> business
+    stemmed = stemmed.replace(/\b(\w+)ies\b/g, '$1y'); // companies -> company
+    
+    // Common verb forms
+    stemmed = stemmed.replace(/\b(\w+)ing\b/g, '$1'); // coaching -> coach
+    stemmed = stemmed.replace(/\b(\w+)ed\b/g, '$1'); // coached -> coach
+    stemmed = stemmed.replace(/\b(\w+)er\b/g, '$1'); // teacher -> teach
+    
+    // Italian verb forms
+    stemmed = stemmed.replace(/\b(\w+)ando\b/g, '$1are'); // parlando -> parlare
+    stemmed = stemmed.replace(/\b(\w+)endo\b/g, '$1ere'); // scrivendo -> scrivere
+    
+    return stemmed;
   }
 
   consolidateEntityGroup(entityGroup) {
@@ -664,9 +1121,10 @@ class EntityAnalyzer {
   chooseBestEntityName(entityGroup) {
     // Priority order:
     // 1. Entities with Wikipedia URLs
-    // 2. Proper nouns (PROPER mentions)
-    // 3. Longer names
-    // 4. First occurrence
+    // 2. More specific names (life coach vs coach)
+    // 3. Proper nouns (PROPER mentions)
+    // 4. Longer names
+    // 5. Higher salience
     
     let bestEntity = entityGroup[0];
     let bestScore = 0;
@@ -674,20 +1132,26 @@ class EntityAnalyzer {
     entityGroup.forEach(entity => {
       let score = 0;
       
-      // Wikipedia URL bonus
+      // Wikipedia URL bonus (highest priority)
       if (entity.wikipediaUrl || entity.metadata.wikipedia_url) {
-        score += 100;
+        score += 1000;
       }
+      
+      // Specificity bonus (prefer "life coach" over "coach")
+      score += this.getSpecificityScore(entity.name, entityGroup);
       
       // Proper noun bonus
       const properMentions = entity.mentions.filter(m => m.type === 'PROPER').length;
-      score += properMentions * 10;
+      score += properMentions * 50;
       
-      // Length bonus
-      score += entity.name.length;
+      // Length bonus (more specific names are usually longer)
+      score += entity.name.length * 2;
       
       // Salience bonus
-      score += entity.salience * 50;
+      score += entity.salience * 100;
+      
+      // Frequency bonus (more mentions = more important)
+      score += entity.mentions.length * 10;
       
       if (score > bestScore) {
         bestScore = score;
@@ -696,6 +1160,34 @@ class EntityAnalyzer {
     });
     
     return bestEntity.name;
+  }
+
+  getSpecificityScore(entityName, entityGroup) {
+    const name = entityName.toLowerCase();
+    let specificityScore = 0;
+    
+    // Check how many other entities in the group are contained in this name
+    entityGroup.forEach(otherEntity => {
+      const otherName = otherEntity.name.toLowerCase();
+      if (otherName !== name && name.includes(otherName)) {
+        // This entity is more specific (contains others)
+        specificityScore += 200;
+      }
+    });
+    
+    // Bonus for compound terms (more specific)
+    const wordCount = name.split(/\s+/).length;
+    specificityScore += wordCount * 20;
+    
+    // Bonus for professional terms that are typically more specific
+    const specificTerms = ['life coach', 'business coach', 'executive coach', 'personal trainer',
+                          'project manager', 'product manager', 'marketing manager'];
+    
+    if (specificTerms.some(term => name.includes(term))) {
+      specificityScore += 100;
+    }
+    
+    return specificityScore;
   }
 
   combineSalienceScores(entityGroup) {

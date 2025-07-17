@@ -98,6 +98,10 @@ class SalienceApp {
 
       // Perform analysis
       const apiResponse = await this.api.analyzeEntities(text, language);
+      
+      // Add original text to API response for enhanced analysis
+      apiResponse.originalText = text;
+      
       const analysisResult = this.analyzer.processEntities(apiResponse, { deduplicate, filterStopwords });
 
       // Validate result
