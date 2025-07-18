@@ -935,8 +935,14 @@ class EntityAnalyzer {
       return false;
     }
     
-    const name1 = entity1.name.toLowerCase();
-    const name2 = entity2.name.toLowerCase();
+    // Apply normalization first to handle markdown, newlines, etc.
+    const name1 = this.normalizeEntityName(entity1.name);
+    const name2 = this.normalizeEntityName(entity2.name);
+    
+    // Check for exact match after normalization
+    if (name1 === name2) {
+      return true;
+    }
     
     // Check for containment (coach vs life coach)
     if (name1.includes(name2) || name2.includes(name1)) {
@@ -944,8 +950,8 @@ class EntityAnalyzer {
     }
     
     // Check for word overlap (significant overlap indicates similarity)
-    const words1 = new Set(name1.split(/\s+/));
-    const words2 = new Set(name2.split(/\s+/));
+    const words1 = new Set(name1.split(/\s+/).filter(w => w.length > 1));
+    const words2 = new Set(name2.split(/\s+/).filter(w => w.length > 1));
     
     const intersection = new Set([...words1].filter(word => words2.has(word)));
     const union = new Set([...words1, ...words2]);
@@ -956,6 +962,15 @@ class EntityAnalyzer {
     // Consider similar if >50% word overlap
     if (similarity > 0.5) {
       return true;
+    }
+    
+    // Check for same words in different order (e.g., "Studio Preinciso" vs "Preinciso Studio")
+    if (words1.size === words2.size && words1.size > 1) {
+      const allWords1Match = [...words1].every(word => words2.has(word));
+      const allWords2Match = [...words2].every(word => words1.has(word));
+      if (allWords1Match && allWords2Match) {
+        return true;
+      }
     }
     
     // Check for stemmed similarity
@@ -1008,6 +1023,12 @@ class EntityAnalyzer {
     
     // Convert to lowercase for comparison
     let normalized = name.toLowerCase();
+    
+    // Remove markdown formatting first
+    normalized = normalized.replace(/[#*_~`]/g, '');
+    
+    // Convert newlines to spaces
+    normalized = normalized.replace(/[\n\r]+/g, ' ');
     
     // Remove extra whitespace
     normalized = normalized.trim().replace(/\s+/g, ' ');
@@ -1121,10 +1142,11 @@ class EntityAnalyzer {
   chooseBestEntityName(entityGroup) {
     // Priority order:
     // 1. Entities with Wikipedia URLs
-    // 2. More specific names (life coach vs coach)
-    // 3. Proper nouns (PROPER mentions)
-    // 4. Longer names
-    // 5. Higher salience
+    // 2. Clean names (no markdown characters)
+    // 3. More specific names (life coach vs coach)
+    // 4. Proper nouns (PROPER mentions)
+    // 5. Longer names
+    // 6. Higher salience
     
     let bestEntity = entityGroup[0];
     let bestScore = 0;
@@ -1135,6 +1157,13 @@ class EntityAnalyzer {
       // Wikipedia URL bonus (highest priority)
       if (entity.wikipediaUrl || entity.metadata.wikipedia_url) {
         score += 1000;
+      }
+      
+      // Clean name bonus - penalize names with markdown or formatting
+      if (!/[#*_~`\n\r]/.test(entity.name)) {
+        score += 500; // High priority for clean names
+      } else {
+        score -= 200; // Penalize names with markdown
       }
       
       // Specificity bonus (prefer "life coach" over "coach")
